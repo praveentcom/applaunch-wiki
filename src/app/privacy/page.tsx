@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.siteMeta.title} - Privacy Policy`,
-  description: siteConfig.siteMeta.description,
+  title: `${siteConfig.siteMeta?.title || 'App'} - Privacy Policy`,
+  description: siteConfig.siteMeta?.description || 'Privacy policy',
 };
 
 export default function PrivacyPage() {

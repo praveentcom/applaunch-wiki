@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { siteConfig } from '@/config/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = siteConfig.opengraph.url
+  const baseUrl = siteConfig.opengraph?.url || 'https://example.com'
 
   // Base routes that are always included
   const routes = [
@@ -15,7 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Conditionally add privacy policy if enabled
-  if (siteConfig.flags.privacyPolicy) {
+  if (siteConfig.flags?.privacyPolicy) {
     routes.push({
       url: `${baseUrl}/privacy`,
       lastModified: new Date(),
@@ -25,7 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Conditionally add terms of service if enabled
-  if (siteConfig.flags.termsOfService) {
+  if (siteConfig.flags?.termsOfService) {
     routes.push({
       url: `${baseUrl}/terms`,
       lastModified: new Date(),
@@ -35,7 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Conditionally add cookie policy if enabled
-  if (siteConfig.flags.cookiePolicy) {
+  if (siteConfig.flags?.cookiePolicy) {
     routes.push({
       url: `${baseUrl}/cookies`,
       lastModified: new Date(),
@@ -45,7 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   // Conditionally add refund policy if enabled
-  if (siteConfig.flags.refundPolicy) {
+  if (siteConfig.flags?.refundPolicy) {
     routes.push({
       url: `${baseUrl}/refund`,
       lastModified: new Date(),

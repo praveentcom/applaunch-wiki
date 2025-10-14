@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.siteMeta.title} - Terms of Service`,
-  description: siteConfig.siteMeta.description,
+  title: `${siteConfig.siteMeta?.title || 'App'} - Terms of Service`,
+  description: siteConfig.siteMeta?.description || 'Terms of service',
 };
 
 export default function TermsPage() {

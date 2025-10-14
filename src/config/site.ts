@@ -5,6 +5,7 @@ export const siteConfig = {
     keywords: ["mobile app", "app marketing", "storeready", "app store", "google play"],
     author: "StoreReady Team",
     logo: "/Logo.png",
+    legalEntity: "StoreReady Inc.",
   },
   twitter: {
     card: "summary_large_image",

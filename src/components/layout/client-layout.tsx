@@ -24,16 +24,16 @@ export function ClientLayoutInner({ children }: { children: React.ReactNode }) {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <PrefetchLink href="/" className="flex items-center gap-3">
-              {siteConfig.siteMeta.logo && (
+              {siteConfig.siteMeta?.logo && (
                 <Image
                   src={siteConfig.siteMeta.logo}
-                  alt={`${siteConfig.siteMeta.title} logo`}
+                  alt={`${siteConfig.siteMeta?.title || 'App'} logo`}
                   width={64}
                   height={64}
                   className="size-8 rounded-sm"
                 />
               )}
-              <h3>{siteConfig.siteMeta.title}</h3>
+              <h3>{siteConfig.siteMeta?.title || 'App'}</h3>
             </PrefetchLink>
           </div>
           <div className="flex items-center gap-3">
@@ -42,22 +42,22 @@ export function ClientLayoutInner({ children }: { children: React.ReactNode }) {
                 <NavigationMenuItem>
                   <NavigationMenuLink href="/">Home</NavigationMenuLink>
                 </NavigationMenuItem>
-                {siteConfig.flags.privacyPolicy && (
+                {siteConfig.flags?.privacyPolicy && (
                   <NavigationMenuItem>
                     <NavigationMenuLink href="/privacy">Privacy</NavigationMenuLink>
                   </NavigationMenuItem>
                 )}
-                {siteConfig.flags.termsOfService && (
+                {siteConfig.flags?.termsOfService && (
                   <NavigationMenuItem>
                     <NavigationMenuLink href="/terms">Terms</NavigationMenuLink>
                   </NavigationMenuItem>
                 )}
-                {siteConfig.flags.cookiePolicy && (
+                {siteConfig.flags?.cookiePolicy && (
                   <NavigationMenuItem>
                     <NavigationMenuLink href="/cookies">Cookies</NavigationMenuLink>
                   </NavigationMenuItem>
                 )}
-                {siteConfig.flags.refundPolicy && (
+                {siteConfig.flags?.refundPolicy && (
                   <NavigationMenuItem>
                     <NavigationMenuLink href="/refund">Refund</NavigationMenuLink>
                   </NavigationMenuItem>

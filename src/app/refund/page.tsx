@@ -5,8 +5,8 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.siteMeta.title} - Refund Policy`,
-  description: siteConfig.siteMeta.description,
+  title: `${siteConfig.siteMeta?.title || 'App'} - Refund Policy`,
+  description: siteConfig.siteMeta?.description || 'Refund policy',
 };
 
 export default function RefundPage() {

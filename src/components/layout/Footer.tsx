@@ -7,11 +7,11 @@ export function Footer() {
   return (
     <div className="flex items-center justify-between">
     <p className="text-sm text-muted-foreground">
-      © {new Date().getFullYear()} {siteConfig.siteMeta.title}
+      © {new Date().getFullYear()} {siteConfig.siteMeta?.legalEntity || siteConfig.siteMeta?.title || 'App'}
     </p>
 
     <div className="flex items-center gap-4">
-      {siteConfig.flags.privacyPolicy && (
+      {siteConfig.flags?.privacyPolicy && (
         <PrefetchLink
           href="/privacy"
           className="text-sm text-muted-foreground hover:underline"
@@ -19,7 +19,7 @@ export function Footer() {
           Privacy
         </PrefetchLink>
       )}
-      {siteConfig.flags.termsOfService && (
+      {siteConfig.flags?.termsOfService && (
         <PrefetchLink
           href="/terms"
           className="text-sm text-muted-foreground hover:underline"
@@ -27,7 +27,7 @@ export function Footer() {
           Terms
         </PrefetchLink>
       )}
-      {siteConfig.flags.cookiePolicy && (
+      {siteConfig.flags?.cookiePolicy && (
         <PrefetchLink
           href="/cookies"
           className="text-sm text-muted-foreground hover:underline"
@@ -35,7 +35,7 @@ export function Footer() {
           Cookies
         </PrefetchLink>
       )}
-      {siteConfig.flags.refundPolicy && (
+      {siteConfig.flags?.refundPolicy && (
         <PrefetchLink
           href="/refund"
           className="text-sm text-muted-foreground hover:underline"

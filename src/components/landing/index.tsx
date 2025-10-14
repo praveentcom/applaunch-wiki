@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 function isImageAvailable(): boolean {
+  if (!siteConfig.coverSectionMeta?.screenshot) return false;
   return ['image', 'alt', 'width', 'height'].every(property => {
     return siteConfig.coverSectionMeta.screenshot[property as keyof typeof siteConfig.coverSectionMeta.screenshot] !== undefined;
   });

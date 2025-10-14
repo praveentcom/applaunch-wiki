@@ -12,7 +12,7 @@ function isImageAvailable(): boolean {
 
 export const Landing = () => {
   return (
-    <div className={`flex flex-col justify-center gap-8 w-full my-3 md:my-6`}>
+    <div className={`flex flex-col justify-center gap-8 w-full my-3`}>
         {isImageAvailable() && (
           <Image
             src={siteConfig.coverSectionMeta.screenshot.image}

@@ -62,6 +62,16 @@ export function ClientLayoutInner({ children }: { children: React.ReactNode }) {
                     <NavigationMenuLink href="/refund">Refund</NavigationMenuLink>
                   </NavigationMenuItem>
                 )}
+                {siteConfig.customLinks?.header?.map((link, index) => (
+                  <NavigationMenuItem key={index}>
+                    <NavigationMenuLink 
+                      href={link.href}
+                      {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
+                    >
+                      {link.label}
+                    </NavigationMenuLink>
+                  </NavigationMenuItem>
+                ))}
               </NavigationMenuList>
             </NavigationMenu>
             <div className="w-8">

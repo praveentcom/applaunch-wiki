@@ -1,4 +1,63 @@
-export const siteConfig = {
+export interface CustomLink {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+export interface SiteConfig {
+  siteMeta: {
+    title: string;
+    description: string;
+    keywords: string[];
+    author: string;
+    legalEntity: string;
+    logo: string;
+    favicon: string;
+  };
+  twitter: {
+    card: string;
+    title: string;
+    description: string;
+    image: string;
+    site: string;
+    creator: string;
+  };
+  opengraph: {
+    type: string;
+    title: string;
+    description: string;
+    url: string;
+    siteName: string;
+    image: string;
+    locale: string;
+  };
+  appMeta: {
+    ios: string;
+    android: string;
+  };
+  flags: {
+    privacyPolicy: boolean;
+    termsOfService: boolean;
+    cookiePolicy: boolean;
+    refundPolicy: boolean;
+  };
+  heroSection: {
+    title: string;
+    description: string;
+    screenshot: {
+      image: string;
+      alt: string;
+      width: number;
+      height: number;
+    };
+  };
+  customLinks?: {
+    header?: CustomLink[];
+    footer?: CustomLink[];
+  };
+}
+
+export const siteConfig: SiteConfig = {
   siteMeta: {
     title: "AppLaunch Wiki",
     description: "Template for your mobile app marketing page. Configure the app details and download links to get started.",
@@ -44,5 +103,19 @@ export const siteConfig = {
       width: 800,
       height: 1000,
     }
-  }
+  },
+  customLinks: {
+    header: [
+      // Example custom header links (uncomment and modify as needed)
+      // { label: "Blog", href: "/blog", external: false },
+      // { label: "Docs", href: "/docs", external: false },
+      // { label: "Support", href: "https://support.example.com", external: true },
+    ],
+    footer: [
+      // Example custom footer links (uncomment and modify as needed)
+      // { label: "About", href: "/about", external: false },
+      // { label: "Contact", href: "/contact", external: false },
+      // { label: "Blog", href: "/blog", external: false },
+    ],
+  },
 };

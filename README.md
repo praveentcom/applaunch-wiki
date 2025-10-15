@@ -115,6 +115,25 @@ flags: {
 
 **Note:** Links to policy pages will automatically appear/disappear in both the header navigation (desktop) and footer based on these flags.
 
+### Custom Links
+
+Add custom navigation links to your header and footer:
+
+```typescript
+customLinks: {
+  header: [
+    { label: "Blog", href: "/blog", external: false },
+    { label: "Docs", href: "/docs", external: false },
+    { label: "Support", href: "https://support.example.com", external: true },
+  ],
+  footer: [
+    { label: "About", href: "/about", external: false },
+    { label: "Contact", href: "/contact", external: false },
+    { label: "Blog", href: "/blog", external: false },
+  ],
+}
+```
+
 ## Content Management
 
 ### Home Page Content
@@ -292,6 +311,7 @@ Before deploying your site, make sure you've:
 - [ ] Updated all fields in `src/config/site.ts`
 - [ ] Set the correct domain in `opengraph.url`
 - [ ] Configured feature flags for needed policies (privacy, terms, cookies, refund)
+- [ ] Added any custom header/footer links (if needed)
 - [ ] Replaced all template variables in policy files (search for `{{` in all `.md` files)
 - [ ] Removed unused policy pages or set their flags to `false`
 - [ ] Added your app logo (if using one)

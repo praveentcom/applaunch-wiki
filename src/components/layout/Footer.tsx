@@ -43,6 +43,27 @@ export function Footer() {
           Refund
         </PrefetchLink>
       )}
+      {siteConfig.customLinks?.footer?.map((link, index) => (
+        link.external ? (
+          <a
+            key={index}
+            href={link.href}
+            className="text-sm text-muted-foreground hover:underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {link.label}
+          </a>
+        ) : (
+          <PrefetchLink
+            key={index}
+            href={link.href}
+            className="text-sm text-muted-foreground hover:underline"
+          >
+            {link.label}
+          </PrefetchLink>
+        )
+      ))}
     </div>
     </div>
   );

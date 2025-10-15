@@ -123,69 +123,103 @@ Edit the main page content in `src/content/home.md`. This file uses Markdown for
 
 ### Legal Pages (Privacy, Terms, Cookies, Refund)
 
-Template files are located in `src/content/`. Before deploying, replace all template variables with your actual information. Each policy includes:
+The template includes comprehensive, legally-tested policy documents that are automatically generated from a centralized configuration file. Each policy includes:
 
-- **Privacy Policy** (`privacy.md`) - Data collection and usage
-- **Terms of Service** (`terms.md`) - User agreement and rules
-- **Cookie Policy** (`cookies.md`) - Cookie usage and tracking
-- **Refund Policy** (`refund.md`) - Refund and cancellation procedures
+- **Privacy Policy** (`privacy.md`) - GDPR, CCPA, and international compliance
+- **Terms of Service** (`terms.md`) - User agreements, liability, and arbitration
+- **Cookie Policy** (`cookies.md`) - Cookie consent and tracking technologies
+- **Refund Policy** (`refund.md`) - Refund procedures and regional laws
 
-#### Required Template Variables (Common)
+#### Centralized Configuration
 
-These variables appear across multiple policy documents:
+**All policy documents are configured in one place: `src/config/policy.ts`**
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `__APP_NAME__` | Your application name | "MyApp" |
-| `__COMPANY_NAME__` | Your company or entity name | "MyApp Inc." |
-| `__EFFECTIVE_DATE__` | Date when the policy becomes effective | "January 1, 2025" |
-| `__CONTACT_EMAIL__` | Support/legal contact email | "legal@myapp.com" |
-| `__COMPANY_ADDRESS__` | Physical business address | "123 Main St, San Francisco, CA" |
-| `__WEBSITE_URL__` | Your website URL | "https://myapp.com" |
-| `__MINIMUM_AGE__` | Minimum age requirement | "13" or "16" |
-| `__JURISDICTION__` | Governing law jurisdiction | "the State of California" |
-| `__CURRENCY__` | Currency for payments | "USD" |
-| `__MINIMUM_LIABILITY_AMOUNT__` | Minimum liability cap | "$100" |
+This file contains all the variables that populate your legal documents. Simply edit the values in `policy.ts` and they'll automatically update across all 4 policy documents.
 
-#### Policy-Specific Variables
+#### Key Configuration Variables
 
-**Refund Policy:**
-- `__REFUND_WINDOW_DAYS__` - Days to request refund (e.g., "14")
-- `__SUBSCRIPTION_REFUND_WINDOW_DAYS__` - Days for subscription refunds (e.g., "7")
-- `__TRIAL_CANCELLATION_PERIOD__` - Notice period for trial cancellation (e.g., "24 hours")
-- `__REFUND_REVIEW_DAYS__` - Business days to review requests (e.g., "3-5")
-- `__REFUND_PROCESSING_DAYS__` - Days to process refund (e.g., "5-10")
-- `__SUPPORT_RESPONSE_DAYS__` - Support response time (e.g., "1-2")
+**Basic Information:**
+```typescript
+APP_NAME: "Your App Name",
+COMPANY_NAME: "Your Company Inc.",
+EFFECTIVE_DATE: "January 1, 2025",
+LAST_UPDATED_DATE: "January 1, 2025",
+POLICY_VERSION: "1.0",
+```
 
-**Cookie Policy:**
-- `__OTHER_AD_PLATFORMS__` - Additional advertising platforms
-- `__SUPPORT_PLATFORM__` - Customer support tool (e.g., "Intercom")
-- `__PAYMENT_PROCESSOR__` - Payment service (e.g., "Stripe")
-- `__COOKIE_RETENTION_PERIOD__` - How long cookies last (e.g., "90 days")
-- `__ANALYTICS_RETENTION_PERIOD__` - Analytics data retention (e.g., "26 months")
+**Contact & Legal:**
+```typescript
+CONTACT_EMAIL: "support@yourapp.com",
+DISPUTE_EMAIL: "disputes@yourapp.com",
+COMPANY_ADDRESS: "123 Main St, City, State ZIP",
+WEBSITE_URL: "https://yourapp.com",
+JURISDICTION: "State of California",
+MINIMUM_AGE: "13",
+```
 
-#### Optional Template Variables
+**Third-Party Services:**
+```typescript
+ANALYTICS_SERVICES: ["Google Analytics", "Firebase", "Mixpanel"],
+ADVERTISING_PLATFORMS: ["Google Ads", "Facebook Ads"],
+PAYMENT_PROCESSORS: ["Stripe", "PayPal", "Apple Pay"],
+SOCIAL_MEDIA_PLATFORMS: ["Facebook", "Twitter", "Instagram"],
+// ... and more
+```
 
-| Variable | Description |
-|----------|-------------|
-| `__ADDITIONAL_PERSONAL_INFO__` | Additional personal information you collect |
-| `__ADDITIONAL_USE_CASES__` | Additional ways you use user information |
-| `__ADDITIONAL_RESTRICTIONS__` | Additional usage restrictions |
+**Policy-Specific Settings:**
+```typescript
+REFUND_WINDOW_DAYS: "30",
+SUBSCRIPTION_REFUND_WINDOW_DAYS: "7",
+COOKIE_RETENTION_PERIOD: "Up to 12 months",
+ANALYTICS_RETENTION_PERIOD: "26 months",
+```
 
-#### How to Update Legal Documents
+#### How to Customize Legal Documents
 
-1. Open the policy files in `src/content/`:
-   - `privacy.md` - Privacy Policy
-   - `terms.md` - Terms of Service
-   - `cookies.md` - Cookie Policy
-   - `refund.md` - Refund Policy
-2. Use Find & Replace to substitute all template variables (search for `__`)
-3. Review content to ensure it reflects your app's actual practices
-4. Remove any sections that don't apply to your app
-5. **Consult with a legal professional** before publishing
-6. Update `__EFFECTIVE_DATE__` whenever you modify these documents
+1. **Edit Configuration:**
+   - Open `src/config/policy.ts`
+   - Update all values to match your app and business
+   - Save the file
 
-**Legal Disclaimer:** These templates are starting points only and are not legal advice. Consult a legal professional to ensure compliance with GDPR, CCPA, COPPA, App Store requirements, and other applicable laws and regulations.
+2. **Review Generated Content:**
+   - Visit `/privacy`, `/terms`, `/cookies`, and `/refund` pages
+   - Verify all placeholders are replaced correctly
+   - Ensure content accurately reflects your practices
+
+3. **Customize as Needed:**
+   - If you need to modify the actual policy text, edit the markdown files in `src/content/`
+   - Add or remove service providers from the arrays in `policy.ts`
+   - Adjust retention periods, timeframes, and other specifics
+
+4. **Update Dates:**
+   - When making changes, update `LAST_UPDATED_DATE` in `policy.ts`
+   - Increment `POLICY_VERSION` for major updates
+   - Keep `EFFECTIVE_DATE` as the original date your policies took effect
+
+5. **Legal Review:**
+   - **Consult with a legal professional** before publishing
+   - Ensure compliance with applicable laws (GDPR, CCPA, etc.)
+   - Review with counsel after any significant changes
+
+#### Advanced: Array Variables
+
+Service provider arrays (like `ANALYTICS_SERVICES`) support two formats:
+
+- **Inline:** `{{ANALYTICS_SERVICES}}` → "Google Analytics, Firebase, Mixpanel"
+- **List:** `{{ANALYTICS_SERVICES:list}}` → Bullet-pointed list
+
+To add or remove services, simply edit the arrays in `policy.ts`:
+
+```typescript
+ANALYTICS_SERVICES: [
+  "Google Analytics",
+  "Firebase",
+  "Mixpanel",
+  "Your Custom Service" // Add your own
+],
+```
+
+**Legal Disclaimer:** These comprehensive templates are starting points and are not legal advice. They've been enhanced with legally-tested language and international compliance provisions, but you must still consult a legal professional to ensure they meet your specific requirements and comply with GDPR, CCPA, COPPA, App Store requirements, and other applicable laws.
 
 ## SEO Features
 
@@ -258,7 +292,7 @@ Before deploying your site, make sure you've:
 - [ ] Updated all fields in `src/config/site.ts`
 - [ ] Set the correct domain in `opengraph.url`
 - [ ] Configured feature flags for needed policies (privacy, terms, cookies, refund)
-- [ ] Replaced all template variables in policy files (search for `__` in all `.md` files)
+- [ ] Replaced all template variables in policy files (search for `{{` in all `.md` files)
 - [ ] Removed unused policy pages or set their flags to `false`
 - [ ] Added your app logo (if using one)
 - [ ] Added your favicon to `public/` and configured it in `siteMeta.favicon`

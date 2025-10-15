@@ -1,8 +1,8 @@
-**StoreReady** is designed to help you accomplish more with less effort. Built with a focus on simplicity and power, our app combines elegant design with robust functionality to deliver an experience you'll love.
+**AppLaunch Wiki** is designed to help you accomplish more with less effort. Built with a focus on simplicity and power, our app combines elegant design with robust functionality to deliver an experience you'll love.
 
-## Why Choose StoreReady?
+## Why Choose AppLaunch Wiki?
 
-Experience the perfect blend of **intuitive design** and **powerful features** that adapts to your needs. Whether you're managing tasks, connecting with others, or tracking your progress, StoreReady makes it effortless.
+Experience the perfect blend of **intuitive design** and **powerful features** that adapts to your needs. Whether you're managing tasks, connecting with others, or tracking your progress, AppLaunch Wiki makes it effortless.
 
 ### ✨ Key Features
 

@@ -1,5 +1,5 @@
 {
-  "name": "storeready",
+  "name": "applaunch-wiki",
   "version": "1.0.0",
   "description": "A modern, beautiful template for creating mobile app marketing pages. Built with Next.js 15, TypeScript, and Tailwind CSS.",
   "keywords": [
@@ -13,13 +13,13 @@
     "typescript",
     "tailwindcss"
   ],
-  "homepage": "https://github.com/praveentcom/storeready#readme",
+  "homepage": "https://github.com/praveentcom/applaunch-wiki#readme",
   "bugs": {
-    "url": "https://github.com/praveentcom/storeready/issues"
+    "url": "https://github.com/praveentcom/applaunch-wiki/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/praveentcom/storeready.git"
+    "url": "git+https://github.com/praveentcom/applaunch-wiki.git"
   },
   "license": "MIT",
   "author": "Praveen Thirumurugan",

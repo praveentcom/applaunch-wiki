@@ -1,6 +1,6 @@
-# Contributing to StoreReady
+# Contributing to AppLaunch Wiki
 
-First off, thank you for considering contributing to StoreReady! It's people like you that make StoreReady such a great tool.
+First off, thank you for considering contributing to AppLaunch Wiki! It's people like you that make AppLaunch Wiki such a great tool.
 
 ## Code of Conduct
 
@@ -27,7 +27,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 * **Provide a step-by-step description of the suggested enhancement** in as many details as possible.
 * **Provide specific examples to demonstrate the steps** or provide mockups/wireframes.
 * **Describe the current behavior** and **explain which behavior you expected to see instead** and why.
-* **Explain why this enhancement would be useful** to most StoreReady users.
+* **Explain why this enhancement would be useful** to most AppLaunch Wiki users.
 
 ### Pull Requests
 
@@ -45,8 +45,8 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 1. Fork the repo and create your branch from `main`.
 2. Clone your fork:
    ```bash
-   git clone https://github.com/praveentcom/storeready.git
-   cd storeready
+   git clone https://github.com/praveentcom/applaunch-wiki.git
+   cd applaunch-wiki
    ```
 3. Install dependencies:
    ```bash
@@ -104,7 +104,7 @@ Enhancement suggestions are tracked as GitHub issues. When creating an enhanceme
 ## Project Structure
 
 ```
-storeready/
+applaunch-wiki/
 ├── src/
 │   ├── app/              # Next.js app directory
 │   │   ├── cookies/      # Cookie policy page

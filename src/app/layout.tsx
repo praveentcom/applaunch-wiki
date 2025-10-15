@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   description: siteConfig.siteMeta?.description || 'App description',
   keywords: siteConfig.siteMeta?.keywords,
   authors: siteConfig.siteMeta?.author ? [{ name: siteConfig.siteMeta.author }] : undefined,
+  icons: siteConfig.siteMeta?.favicon ? {
+    icon: siteConfig.siteMeta.favicon,
+  } : undefined,
   openGraph: {
     type: (siteConfig.opengraph?.type as "website") || "website",
     title: siteConfig.opengraph?.title || siteConfig.siteMeta?.title || 'App',

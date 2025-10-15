@@ -1,32 +1,33 @@
 export const siteConfig = {
   siteMeta: {
-    title: "StoreReady",
+    title: "AppLaunch Wiki",
     description: "Template for your mobile app marketing page. Configure the app details and download links to get started.",
-    keywords: ["mobile app", "app marketing", "storeready", "app store", "google play"],
-    author: "StoreReady Team",
-    logo: "/Logo.png",
-    legalEntity: "StoreReady Inc.",
+    keywords: ["mobile app", "app marketing", "applaunch-wiki", "app store", "google play"],
+    author: "AppLaunch Wiki Team",
+    legalEntity: "AppLaunch Wiki Inc.",
+    logo: "/logo.png",
+    favicon: "/favicon.ico", // URL to your favicon (.ico or .png)
   },
   twitter: {
     card: "summary_large_image",
-    title: "StoreReady - Mobile App Marketing Template",
+    title: "AppLaunch Wiki - Mobile App Marketing Template",
     description: "Template for your mobile app marketing page. Configure the app details and download links to get started.",
-    image: "/Cover Image.png",
-    site: "@storeready",
-    creator: "@storeready",
+    image: "/cover-image.png",
+    site: "@praveentcom",
+    creator: "@praveentcom",
   },
   opengraph: {
     type: "website",
-    title: "StoreReady - Mobile App Marketing Template",
+    title: "AppLaunch Wiki - Mobile App Marketing Template",
     description: "Template for your mobile app marketing page. Configure the app details and download links to get started.",
-    url: "https://storeready.example.com",
-    siteName: "StoreReady",
-    image: "/Cover Image.png",
+    url: "https://applaunch.wiki",
+    siteName: "AppLaunch Wiki",
+    image: "/cover-image.png",
     locale: "en_US",
   },
   appMeta: {
-    ios: "https://apps.apple.com/us/app/storeready/id1234567890",
-    android: "https://play.google.com/store/apps/details?id=com.storeready.package",
+    ios: "https://apps.apple.com/us/app/applaunch-wiki/id1234567890",
+    android: "https://play.google.com/store/apps/details?id=android.applaunch.wiki",
   },
   flags: {
     privacyPolicy: true,
@@ -34,12 +35,12 @@ export const siteConfig = {
     cookiePolicy: true,
     refundPolicy: true,
   },
-  coverSectionMeta: {
-    title: "StoreReady",
+  heroSection: {
+    title: "AppLaunch Wiki",
     description: "Template for your mobile app marketing page. Configure the app details and download links to get started.",
     screenshot: {
-      image: "/iPhone Mock.png",
-      alt: "StoreReady App Screenshot",
+      image: "/hero-image.png",
+      alt: "Hero Image",
       width: 800,
       height: 1000,
     }

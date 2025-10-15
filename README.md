@@ -1,4 +1,4 @@
-# StoreReady
+# AppLaunch Wiki
 
 A modern, beautiful template for creating mobile app marketing pages. Built with Next.js 15, TypeScript, and Tailwind CSS.
 
@@ -46,7 +46,8 @@ siteMeta: {
   description: "Your app description",
   keywords: ["keyword1", "keyword2"],
   author: "Your Name or Company",
-  logo: "/Logo.png", // Optional: 64x64px recommended
+  logo: "/logo.png", // Optional: 64x64px recommended
+  favicon: "/favicon.ico", // URL to your favicon (.ico or .png)
 }
 ```
 
@@ -72,7 +73,7 @@ opengraph: {
   description: "Your description",
   url: "https://yourdomain.com", // IMPORTANT: Update this
   siteName: "Your App Name",
-  image: "/Cover Image.png", // 1200x630px recommended
+  image: "/cover-image.png", // 1200x630px recommended
   locale: "en_US",
 }
 ```
@@ -87,12 +88,12 @@ opengraph: {
 Customize the landing page hero section:
 
 ```typescript
-coverSectionMeta: {
+heroSection: {
   title: "Your App Name",
   description: "Your tagline or description",
   screenshot: {
-    image: "/iPhone Mock.png",
-    alt: "App Screenshot",
+    image: "/hero-image.png",
+    alt: "Hero Image",
     width: 800,
     height: 1000,
   }
@@ -213,17 +214,31 @@ All pages include:
 
 ## Customization
 
+### Favicon
+
+Place your favicon file in the `public/` folder and configure it in `src/config/site.ts`:
+
+```typescript
+siteMeta: {
+  favicon: "/favicon.ico", // or "/favicon.png"
+}
+```
+
+**Recommended formats:**
+- `.ico` format (supports multiple sizes: 16x16, 32x32, 48x48)
+- `.png` format (32x32px or 64x64px recommended)
+
 ### Adding App Store Badges
 
 The template includes official App Store and Google Play badges in `public/`:
-- `Apple App Store.svg`
-- `Google Play.svg`
+- `apple-app-store.svg`
+- `google-play.svg`
 
 To use different badges, replace these files with your own.
 
 ### Screenshots
 
-Add your app screenshots to the `public` folder and update the `coverSectionMeta` in `src/config/site.ts`.
+Add your app screenshots to the `public` folder and update the `heroSection` in `src/config/site.ts`.
 
 ### Styling
 
@@ -246,6 +261,7 @@ Before deploying your site, make sure you've:
 - [ ] Replaced all template variables in policy files (search for `__` in all `.md` files)
 - [ ] Removed unused policy pages or set their flags to `false`
 - [ ] Added your app logo (if using one)
+- [ ] Added your favicon to `public/` and configured it in `siteMeta.favicon`
 - [ ] Added app screenshots
 - [ ] Updated `src/content/home.md` with your app's content
 - [ ] Tested all app store links
@@ -277,8 +293,8 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ## Support
 
 If you have questions or need help:
-- 📫 [Open an issue](https://github.com/praveentcom/storeready/issues)
-- 💬 Start a [discussion](https://github.com/praveentcom/storeready/discussions) (if enabled)
+- 📫 [Open an issue](https://github.com/praveentcom/applaunch-wiki/issues)
+- 💬 Start a [discussion](https://github.com/praveentcom/applaunch-wiki/discussions) (if enabled)
 - ⭐ Star the repo if you find it helpful!
 
 ## License

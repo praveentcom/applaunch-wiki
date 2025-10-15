@@ -254,7 +254,7 @@ If you are in the EEA, UK, or Switzerland, you have the right to lodge a complai
 To exercise any of these rights:
 1. **In-App:** Use the privacy settings and account management features
 2. **Email:** Contact us at {{CONTACT_EMAIL}}
-3. **Website:** Visit our privacy portal at {{WEBSITE_URL}}/privacy
+3. **Website:** Visit our privacy portal at {{PRIVACY_PORTAL_URL}}
 
 We will respond to your request within:
 - 30 days (GDPR/UK GDPR)
@@ -369,7 +369,7 @@ Residents of other jurisdictions may have additional rights under applicable loc
 
 ## 14. Cookies and Tracking Technologies
 
-We use cookies and similar tracking technologies. For detailed information about our use of cookies, please review our [Cookie Policy]({{WEBSITE_URL}}/cookies).
+We use cookies and similar tracking technologies. For detailed information about our use of cookies, please review our [Cookie Policy]({{COOKIE_POLICY_URL}}).
 
 ## 15. Third-Party Links and Services
 

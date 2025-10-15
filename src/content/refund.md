@@ -5,7 +5,7 @@
 
 Thank you for choosing __APP_NAME__! This Refund Policy ("Policy") explains our policies and procedures regarding refunds, cancellations, billing, and subscription management for purchases made through our mobile application (the "App").
 
-This Policy should be read in conjunction with our [Terms of Service](__WEBSITE_URL__/terms) and [Privacy Policy](__WEBSITE_URL__/privacy).
+This Policy should be read in conjunction with our [Terms of Service](__TERMS_URL__) and [Privacy Policy](__PRIVACY_POLICY_URL__).
 
 **Please read this Policy carefully before making any purchases. By making a purchase through the App, you acknowledge that you have read, understood, and agree to this Refund Policy.**
 
@@ -391,7 +391,7 @@ Before contacting us, collect the following:
 - Provide detailed information about your request
 
 **Web Form:**
-- Visit: __SUPPORT_URL__/refund-request
+- Visit: __REFUND_REQUEST_URL__
 - Fill out the refund request form with required details
 
 **Step 3: Our Review Process**
@@ -817,9 +817,9 @@ For refund inquiries, billing questions, or assistance:
 
 **Online Resources:**
 - **Help Center:** __SUPPORT_URL__
-- **Refund Request Form:** __SUPPORT_URL__/refund-request
-- **FAQ:** __SUPPORT_URL__/faq
-- **Contact Form:** __SUPPORT_URL__/contact
+- **Refund Request Form:** __REFUND_REQUEST_URL__
+- **FAQ:** __FAQ_URL__
+- **Contact Form:** __CONTACT_FORM_URL__
 
 **In-App Support:**
 - Open __APP_NAME__ → Settings → Help & Support → Contact Us

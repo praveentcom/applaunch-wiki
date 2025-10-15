@@ -5,7 +5,7 @@
 
 {{APP_NAME}} ("we," "us," "our," or "{{COMPANY_NAME}}") uses cookies, web beacons, pixels, mobile identifiers, and similar tracking technologies on our website and mobile application (collectively, the "App" or "Services"). This Cookie Policy explains what these technologies are, how and why we use them, what information they collect, and your choices regarding their use.
 
-This Cookie Policy should be read in conjunction with our [Privacy Policy]({{WEBSITE_URL}}/privacy) and [Terms of Service]({{WEBSITE_URL}}/terms).
+This Cookie Policy should be read in conjunction with our [Privacy Policy]({{PRIVACY_POLICY_URL}}) and [Terms of Service]({{TERMS_URL}}).
 
 **By continuing to use {{APP_NAME}}, you consent to our use of cookies and tracking technologies as described in this Cookie Policy, unless you have disabled or opted out of them as explained below.**
 

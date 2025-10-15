@@ -34,8 +34,20 @@ export const policyConfig = {
   TECHNICAL_SUPPORT_EMAIL: "support@applaunch.wiki",    // Technical support issues
   FEEDBACK_EMAIL: "feedback@applaunch.wiki",            // User feedback and suggestions
   WEBSITE_URL: "https://applaunch.wiki",                // Main website URL (without trailing slash)
-  SUPPORT_URL: "https://applaunch.wiki/support",        // Help center / support page URL
-  COOKIE_SETTINGS_URL: "https://applaunch.wiki/cookie-settings",  // Cookie preferences page
+  
+  // Policy Page URLs (for cross-linking between policies)
+  PRIVACY_POLICY_URL: "https://applaunch.wiki/privacy",
+  TERMS_URL: "https://applaunch.wiki/terms",
+  COOKIE_POLICY_URL: "https://applaunch.wiki/cookies",
+  REFUND_POLICY_URL: "https://applaunch.wiki/refund",
+  
+  // Support & Help URLs
+  SUPPORT_URL: "https://applaunch.wiki",                // Help center / support page URL
+  COOKIE_SETTINGS_URL: "https://applaunch.wiki",        // Cookie preferences page
+  PRIVACY_PORTAL_URL: "https://applaunch.wiki/privacy", // Privacy request portal
+  REFUND_REQUEST_URL: "https://applaunch.wiki",         // Refund request form
+  FAQ_URL: "https://applaunch.wiki",                    // FAQ page
+  CONTACT_FORM_URL: "https://applaunch.wiki",           // Contact form
   
   // Legal & Compliance
   JURISDICTION: "State of California",

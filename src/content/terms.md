@@ -11,7 +11,7 @@ Welcome to {{APP_NAME}}! These Terms of Service ("Terms," "Agreement," or "TOS")
 
 ### 1.1 Binding Agreement
 By downloading, installing, accessing, or using {{APP_NAME}}, you:
-- Agree to be bound by these Terms and our [Privacy Policy]({{WEBSITE_URL}}/privacy)
+- Agree to be bound by these Terms and our [Privacy Policy]({{PRIVACY_POLICY_URL}})
 - Represent that you have the legal capacity to enter into this Agreement
 - Acknowledge that this Agreement may be modified as described in Section 17
 - Consent to receive communications from us electronically
@@ -289,7 +289,7 @@ We may offer free trial periods for Subscriptions. By starting a free trial:
 
 ### 7.5 Refunds and Cancellations
 - Refund requests are primarily subject to the refund policy of Apple App Store or Google Play Store
-- For detailed refund information, see our [Refund Policy]({{WEBSITE_URL}}/refund)
+- For detailed refund information, see our [Refund Policy]({{REFUND_POLICY_URL}})
 - All fees are non-refundable except as required by law or as specified in our Refund Policy
 - Refunds, if granted, will be issued to your original payment method
 - We reserve the right to refuse refunds for suspected abuse or fraud

@@ -347,7 +347,7 @@ If you are in the European Economic Area (EEA), United Kingdom, or Switzerland, 
 
 ### 12.3 Data Protection Officer
 For GDPR-related inquiries, you may contact our Data Protection Officer:
-- Email: dpo@{{WEBSITE_URL}}
+- Email: {{DPO_EMAIL}}
 - Address: {{COMPANY_ADDRESS}}
 
 ### 12.4 EU Representative
@@ -415,7 +415,7 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 **Website:** {{WEBSITE_URL}}  
 **Phone:** [Phone Number]
 
-**Data Protection Officer:** dpo@{{WEBSITE_URL}}
+**Data Protection Officer:** {{DPO_EMAIL}}
 
 **Response Time:** We will respond to your inquiry within 48-72 hours for general inquiries and within the time period required by applicable law for formal requests.
 

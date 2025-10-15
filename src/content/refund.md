@@ -813,7 +813,7 @@ For refund inquiries, billing questions, or assistance:
 **Email Support (Primary):**
 - **General Refunds:** __CONTACT_EMAIL__
 - **Dispute Resolution:** __DISPUTE_EMAIL__
-- **Technical Support:** support@__WEBSITE_URL__
+- **Technical Support:** __TECHNICAL_SUPPORT_EMAIL__
 
 **Online Resources:**
 - **Help Center:** __SUPPORT_URL__
@@ -867,7 +867,7 @@ To help us assist you quickly, please include:
 ### 12.5 Feedback and Suggestions
 
 We value your feedback! If you have suggestions for improving our refund policy or process:
-- Email: feedback@__WEBSITE_URL__
+- Email: __FEEDBACK_EMAIL__
 - In-App: Settings → Help & Support → Provide Feedback
 - We review all feedback and use it to improve our services
 

@@ -261,7 +261,7 @@ You have various options to control cookies and tracking technologies:
 
 **Changing Your Preferences:**
 - You can update your cookie preferences at any time by accessing the cookie settings in our App or website footer
-- Link to cookie preference center: {{WEBSITE_URL}}/cookie-settings
+- Link to cookie preference center: {{COOKIE_SETTINGS_URL}}
 
 ### 5.2 Web Browser Settings
 Most web browsers provide built-in controls for cookies:
@@ -516,10 +516,10 @@ If you have any questions, concerns, or requests regarding our use of cookies an
 **{{COMPANY_NAME}}**  
 **Email:** {{CONTACT_EMAIL}}  
 **Address:** {{COMPANY_ADDRESS}}  
-**Website:** {{WEBSITE_URL}}
-**Cookie Settings:** {{WEBSITE_URL}}/cookie-settings
+**Website:** {{WEBSITE_URL}}  
+**Cookie Settings:** {{COOKIE_SETTINGS_URL}}
 
-**Data Protection Officer (if applicable):** dpo@{{WEBSITE_URL}}
+**Data Protection Officer (if applicable):** {{DPO_EMAIL}}
 
 **Response Time:** We will respond to your inquiry within 48-72 hours for general inquiries and within the time required by applicable law for formal requests.
 

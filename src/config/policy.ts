@@ -28,17 +28,21 @@ export const policyConfig = {
   POLICY_VERSION: "2.0",
   
   // Contact Information
-  CONTACT_EMAIL: "support@applaunch.wiki",
-  DISPUTE_EMAIL: "disputes@applaunch.wiki",
-  COMPANY_ADDRESS: "123 Main Street, San Francisco, CA 94102, United States",
-  WEBSITE_URL: "https://applaunch.wiki",
-  SUPPORT_URL: "https://applaunch.wiki/support",
+  CONTACT_EMAIL: "support@applaunch.wiki",              // General support and inquiries
+  DISPUTE_EMAIL: "disputes@applaunch.wiki",             // Dispute resolution and chargebacks
+  DPO_EMAIL: "dpo@applaunch.wiki",                      // Data Protection Officer (GDPR)
+  TECHNICAL_SUPPORT_EMAIL: "support@applaunch.wiki",    // Technical support issues
+  FEEDBACK_EMAIL: "feedback@applaunch.wiki",            // User feedback and suggestions
+  WEBSITE_URL: "https://applaunch.wiki",                // Main website URL (without trailing slash)
+  SUPPORT_URL: "https://applaunch.wiki/support",        // Help center / support page URL
+  COOKIE_SETTINGS_URL: "https://applaunch.wiki/cookie-settings",  // Cookie preferences page
   
   // Legal & Compliance
   JURISDICTION: "State of California",
   MINIMUM_AGE: "13",
   CURRENCY: "USD",
   MINIMUM_LIABILITY_AMOUNT: "$100",
+  COMPANY_ADDRESS: "123 Main Street, San Francisco, CA 94102, United States",
   
   // Privacy Policy Specific
   ADDITIONAL_PERSONAL_INFO: [

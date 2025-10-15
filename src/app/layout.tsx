@@ -6,14 +6,14 @@ import { ThemeProvider } from "passport-ui/theme-provider";
 import { siteConfig } from "@/config/site";
 
 // Extract App Store ID from iOS URL if available
-const getAppStoreId = (url: string | undefined): string | null => {
+const getAppStoreId = (url: string | undefined | null): string | null => {
   if (!url) return null;
   const match = url.match(/id(\d+)/);
   return match ? match[1] : null;
 };
 
 // Extract Android package name from Play Store URL if available
-const getAndroidPackageName = (url: string | undefined): string | null => {
+const getAndroidPackageName = (url: string | undefined | null): string | null => {
   if (!url) return null;
   const match = url.match(/id=([^&]+)/);
   return match ? match[1] : null;
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   ...(appStoreId && {
     itunes: {
       appId: appStoreId,
-      appArgument: siteConfig.appMeta?.ios,
+      appArgument: siteConfig.appMeta?.ios || undefined,
     },
   }),
   // Additional metadata for app stores

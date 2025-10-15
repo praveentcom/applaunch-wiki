@@ -32,8 +32,8 @@ export interface SiteConfig {
     locale: string;
   };
   appMeta: {
-    ios: string;
-    android: string;
+    ios?: string | null | undefined;
+    android?: string | null | undefined;
   };
   flags: {
     privacyPolicy: boolean;

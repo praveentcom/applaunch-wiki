@@ -34,6 +34,8 @@ export interface SiteConfig {
   appMeta: {
     ios?: string | null | undefined;
     android?: string | null | undefined;
+    web?: string | null | undefined;
+    github?: string | null | undefined;
   };
   flags: {
     privacyPolicy: boolean;
@@ -87,6 +89,8 @@ export const siteConfig: SiteConfig = {
   appMeta: {
     ios: "https://apps.apple.com/us/app/applaunch-wiki/id1234567890",
     android: "https://play.google.com/store/apps/details?id=android.applaunch.wiki",
+    web: "https://example.com",
+    github: "https://github.com/example/repo",
   },
   flags: {
     privacyPolicy: true,

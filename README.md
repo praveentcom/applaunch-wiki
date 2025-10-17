@@ -59,8 +59,12 @@ Configure your app download links:
 appMeta: {
   ios: "https://apps.apple.com/...",
   android: "https://play.google.com/store/...",
+  web: "https://your-web-app.com", // Optional: Link to your web app
+  github: "https://github.com/username/repo", // Optional: Link to your GitHub repository
 }
 ```
+
+You can use any combination of these links. The template will automatically display the appropriate buttons based on the links you provide.
 
 ### SEO & Social Media
 

@@ -2,6 +2,7 @@
 import { siteConfig } from "@/config/site";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "passport-ui/button";
 
 function isImageAvailable(): boolean {
   if (!siteConfig.heroSection?.screenshot) return false;
@@ -48,6 +49,20 @@ export const Landing = () => {
                 className="h-8 w-auto"
               />
             </Link>
+          )}
+          {siteConfig.appMeta?.web && (
+            <Button asChild>
+              <Link href={siteConfig.appMeta.web} target="_blank" rel="noopener noreferrer">
+                Learn More →
+              </Link>
+            </Button>
+          )}
+          {siteConfig.appMeta?.github && (
+            <Button asChild>
+              <Link href={siteConfig.appMeta.github} target="_blank" rel="noopener noreferrer">
+                GitHub →
+              </Link>
+            </Button>
           )}
         </div>
       </div>

@@ -23,31 +23,31 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 
   return (
     <div
-      className={`flex flex-col p-8 rounded-lg space-y-4 hover:shadow-lg transition-shadow relative ${
+      className={`flex flex-col p-6 rounded-lg space-y-3 hover:shadow-lg transition-shadow relative ${
         isFeatured ? 'border-2 border-primary' : 'border'
       }`}
     >
       {isFeatured && plan.featured?.label && (
-        <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+        <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-3 py-0.5 rounded-full text-xs font-medium">
           {plan.featured.label}
         </div>
       )}
-      <h3 className="text-2xl font-semibold">{plan.title}</h3>
-      <div className="text-4xl font-bold">
+      <h3 className="text-xl font-semibold">{plan.title}</h3>
+      <div className="text-3xl font-bold">
         {plan.price.originalAmount && (
-          <span className="text-2xl line-through text-muted-foreground mr-2">
+          <span className="text-xl line-through text-muted-foreground mr-2">
             {plan.price.currency}{plan.price.originalAmount}
           </span>
         )}
         {priceDisplay}
         {plan.price.period && !isCustomPricing && (
-          <span className="text-lg font-normal text-muted-foreground">
+          <span className="text-base font-normal text-muted-foreground">
             /{plan.price.period}
           </span>
         )}
       </div>
-      <p className="text-muted-foreground">{plan.description}</p>
-      <ul className="space-y-2 flex-grow">
+      <p className="text-sm text-muted-foreground">{plan.description}</p>
+      <ul className="space-y-1.5 flex-grow text-sm">
         {plan.features.map((feature, index) => (
           <li key={index} className="flex items-start">
             <span className="mr-2">✓</span>
@@ -67,7 +67,7 @@ export default function PricingPage() {
     <ContentContainer variant="relaxed">
       <Markdown content={pricingContent} />
       <Separator />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full py-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full py-6">
         {plans.map((plan, index) => (
           <PricingCard key={index} plan={plan} />
         ))}

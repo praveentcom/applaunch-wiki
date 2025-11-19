@@ -42,6 +42,11 @@ export function ClientLayoutInner({ children }: { children: React.ReactNode }) {
                 <NavigationMenuItem>
                   <NavigationMenuLink href="/">Home</NavigationMenuLink>
                 </NavigationMenuItem>
+                {siteConfig.flags?.pricingPage && (
+                  <NavigationMenuItem>
+                    <NavigationMenuLink href="/pricing">Pricing</NavigationMenuLink>
+                  </NavigationMenuItem>
+                )}
                 {siteConfig.flags?.privacyPolicy && (
                   <NavigationMenuItem>
                     <NavigationMenuLink href="/privacy">Privacy</NavigationMenuLink>

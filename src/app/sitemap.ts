@@ -14,6 +14,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  // Conditionally add pricing page if enabled
+  if (siteConfig.flags?.pricingPage) {
+    routes.push({
+      url: `${baseUrl}/pricing`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })
+  }
+
   // Conditionally add privacy policy if enabled
   if (siteConfig.flags?.privacyPolicy) {
     routes.push({

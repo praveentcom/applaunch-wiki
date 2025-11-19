@@ -11,6 +11,14 @@ export function Footer() {
     </p>
 
     <div className="flex items-center gap-4">
+      {siteConfig.flags?.pricingPage && (
+        <PrefetchLink
+          href="/pricing"
+          className="text-sm text-muted-foreground hover:underline"
+        >
+          Pricing
+        </PrefetchLink>
+      )}
       {siteConfig.flags?.privacyPolicy && (
         <PrefetchLink
           href="/privacy"

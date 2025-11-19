@@ -42,6 +42,7 @@ export interface SiteConfig {
     termsOfService: boolean;
     cookiePolicy: boolean;
     refundPolicy: boolean;
+    pricingPage: boolean;
   };
   heroSection: {
     title: string;
@@ -97,6 +98,7 @@ export const siteConfig: SiteConfig = {
     termsOfService: true,
     cookiePolicy: true,
     refundPolicy: true,
+    pricingPage: true,
   },
   heroSection: {
     title: "AppLaunch Wiki",

@@ -5,12 +5,12 @@ import { PrefetchLink } from "passport-ui/prefetch-link";
 
 export function Footer() {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
     <p className="text-sm text-muted-foreground">
       © {new Date().getFullYear()} {siteConfig.siteMeta?.legalEntity || siteConfig.siteMeta?.title || 'App'}
     </p>
 
-    <div className="flex items-center gap-4">
+    <div className="flex items-center flex-wrap justify-center gap-4">
       {siteConfig.flags?.pricingPage && (
         <PrefetchLink
           href="/pricing"

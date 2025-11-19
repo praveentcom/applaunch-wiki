@@ -4,6 +4,22 @@ export interface CustomLink {
   external?: boolean;
 }
 
+export interface PricingPlan {
+  title: string;
+  description: string;
+  price: {
+    amount: number;
+    currency: string;
+    period?: string; // e.g., "mo", "yr", or omit for one-time
+    originalAmount?: number; // For showing discounts
+  };
+  featured?: {
+    enabled: boolean;
+    label?: string; // e.g., "Popular", "Recommended", "Best Value"
+  };
+  features: string[];
+}
+
 export interface SiteConfig {
   siteMeta: {
     title: string;
@@ -57,6 +73,9 @@ export interface SiteConfig {
   customLinks?: {
     header?: CustomLink[];
     footer?: CustomLink[];
+  };
+  pricing?: {
+    plans: PricingPlan[];
   };
 }
 
@@ -122,6 +141,56 @@ export const siteConfig: SiteConfig = {
       // { label: "About", href: "/about", external: false },
       // { label: "Contact", href: "/contact", external: false },
       // { label: "Blog", href: "/blog", external: false },
+    ],
+  },
+  pricing: {
+    plans: [
+      {
+        title: "Free",
+        description: "Perfect for getting started",
+        price: {
+          amount: 0,
+          currency: "$",
+        },
+        features: [
+          "Basic features",
+          "Community support",
+          "Limited usage",
+        ],
+      },
+      {
+        title: "Pro",
+        description: "For professionals and teams",
+        price: {
+          amount: 9.99,
+          currency: "$",
+          period: "mo",
+        },
+        featured: {
+          enabled: true,
+          label: "Popular",
+        },
+        features: [
+          "All Free features",
+          "Priority support",
+          "Advanced features",
+          "Unlimited usage",
+        ],
+      },
+      {
+        title: "Enterprise",
+        description: "For large organizations",
+        price: {
+          amount: 0, // Custom pricing
+          currency: "$",
+        },
+        features: [
+          "All Pro features",
+          "Dedicated support",
+          "Custom integrations",
+          "SLA guarantee",
+        ],
+      },
     ],
   },
 };

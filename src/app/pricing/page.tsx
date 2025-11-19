@@ -68,8 +68,8 @@ export default function PricingPage() {
       <Markdown content={pricingContent} />
       <Separator />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full py-6">
-        {plans.map((plan, index) => (
-          <PricingCard key={index} plan={plan} />
+        {plans.map((plan) => (
+          <PricingCard key={plan.title.toLowerCase()} plan={plan} />
         ))}
       </div>
     </ContentContainer>

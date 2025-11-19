@@ -49,7 +49,7 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
       <p className="text-sm text-muted-foreground">{plan.description}</p>
       <ul className="space-y-1.5 flex-grow text-sm">
         {plan.features.map((feature, index) => (
-          <li key={index} className="flex items-start">
+          <li key={feature} className="flex items-start">
             <span className="mr-2">✓</span>
             <span>{feature}</span>
           </li>

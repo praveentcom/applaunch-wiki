@@ -20,7 +20,7 @@ export const Landing = () => {
             alt={siteConfig.heroSection.screenshot.alt}
             width={siteConfig.heroSection.screenshot.width || 768}
             height={siteConfig.heroSection.screenshot.height || 1024}
-            className="max-h-96 w-max"
+            className="w-full max-w-sm md:max-w-md h-auto object-contain"
           />
         )}
         <div>
@@ -30,23 +30,23 @@ export const Landing = () => {
         <div className="flex flex-row items-center gap-4">
           {siteConfig.appMeta?.ios && (
             <Link href={siteConfig.appMeta.ios} target="_blank" rel="noopener noreferrer">
-              <Image 
-                src="/apple-app-store.svg" 
-                alt="Download on the App Store" 
-                width={90} 
+              <Image
+                src="/apple-app-store.svg"
+                alt="Download on the App Store"
+                width={90}
                 height={30}
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
           )}
           {siteConfig.appMeta?.android && (
             <Link href={siteConfig.appMeta.android} target="_blank" rel="noopener noreferrer">
-              <Image 
-                src="/google-play.svg" 
-                alt="Get it on Google Play" 
-                width={100} 
+              <Image
+                src="/google-play.svg"
+                alt="Get it on Google Play"
+                width={100}
                 height={30}
-                className="h-8 w-auto"
+                className="h-10 w-auto"
               />
             </Link>
           )}

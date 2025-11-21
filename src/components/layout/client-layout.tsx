@@ -80,7 +80,7 @@ export function ClientLayoutInner({ children }: { children: React.ReactNode }) {
               </NavigationMenuList>
             </NavigationMenu>
             <div className="w-8">
-              <ThemeButton minimal variant="ghost" align="end" size="medium" />
+              <ThemeButton minimal align="end" />
             </div>
           </div>
         </div>

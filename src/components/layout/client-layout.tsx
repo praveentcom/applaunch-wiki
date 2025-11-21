@@ -79,9 +79,7 @@ export function ClientLayoutInner({ children }: { children: React.ReactNode }) {
                 ))}
               </NavigationMenuList>
             </NavigationMenu>
-            <div className="w-8">
-              <ThemeButton minimal align="end" />
-            </div>
+            <ThemeButton minimal align="end" />
           </div>
         </div>
       }

@@ -27,7 +27,7 @@ export const Landing = () => {
           <h1>{siteConfig.heroSection.title}</h1>
           <p>{siteConfig.heroSection.description}</p>
         </div>
-        <div className="flex flex-row items-center gap-4">
+        <div className="flex flex-row flex-wrap items-center gap-4">
           {siteConfig.appMeta?.ios && (
             <Link href={siteConfig.appMeta.ios} target="_blank" rel="noopener noreferrer">
               <Image

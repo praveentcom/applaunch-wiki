@@ -20,6 +20,14 @@ export interface PricingPlan {
   features: string[];
 }
 
+export interface Testimonial {
+  content: string;
+  reviewerName: string;
+  reviewerPosition: string;
+  source: string;
+  reviewerPhotoUrl?: string;
+}
+
 export interface SiteConfig {
   siteMeta: {
     title: string;
@@ -76,6 +84,10 @@ export interface SiteConfig {
   };
   pricing?: {
     plans: PricingPlan[];
+  };
+  testimonials?: {
+    title: string;
+    items: Testimonial[];
   };
 }
 
@@ -190,6 +202,29 @@ export const siteConfig: SiteConfig = {
           "Custom integrations",
           "SLA guarantee",
         ],
+      },
+    ],
+  },
+  testimonials: {
+    title: "What Our Users Say",
+    items: [
+      {
+        content: "This app has completely transformed the way I work. The interface is intuitive and the features are exactly what I needed.",
+        reviewerName: "Sarah Johnson",
+        reviewerPosition: "Product Manager",
+        source: "App Store Review",
+      },
+      {
+        content: "I've tried many similar apps, but this one stands out. Great performance and excellent customer support.",
+        reviewerName: "Michael Chen",
+        reviewerPosition: "Software Engineer",
+        source: "Google Play Review",
+      },
+      {
+        content: "The best investment for our team. It has improved our productivity significantly and the learning curve was minimal.",
+        reviewerName: "Emily Rodriguez",
+        reviewerPosition: "Team Lead",
+        source: "Enterprise Customer",
       },
     ],
   },

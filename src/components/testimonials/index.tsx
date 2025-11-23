@@ -14,8 +14,8 @@ export const Testimonials = () => {
         {siteConfig.testimonials.title}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {siteConfig.testimonials.items.map((testimonial, index) => (
-          <Card key={index} className="flex flex-col">
+        {siteConfig.testimonials.items.map((testimonial) => (
+          <Card key={`${testimonial.reviewerName}-${testimonial.source}`} className="flex flex-col">
             <CardContent className="flex flex-col gap-4 flex-1">
               <p className="text-sm md:text-base italic text-muted-foreground flex-1">
                 &ldquo;{testimonial.content}&rdquo;

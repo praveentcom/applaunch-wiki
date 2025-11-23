@@ -23,6 +23,7 @@ const appStoreId = getAppStoreId(siteConfig.appMeta?.ios);
 const androidPackageName = getAndroidPackageName(siteConfig.appMeta?.android);
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.opengraph?.url || 'https://applaunch.wiki'),
   title: siteConfig.siteMeta?.title || 'App',
   description: siteConfig.siteMeta?.description || 'App description',
   keywords: siteConfig.siteMeta?.keywords,

@@ -7,7 +7,7 @@ A modern, beautiful template for creating mobile app marketing pages. Built with
 ✨ **Modern Design** - Clean, responsive UI with light/dark mode support  
 🎨 **Fully Customizable** - Easy configuration through a single config file  
 🔍 **SEO Ready** - Built-in sitemap, robots.txt, and meta tags  
-📄 **Legal Pages** - Pre-configured Privacy, Terms, Cookie, and Refund Policy templates  
+📄 **Legal Pages** - Pre-configured Privacy, Terms, Cookie, and Refund Policy templates
 
 ## Getting Started
 
@@ -83,6 +83,7 @@ opengraph: {
 ```
 
 **Important:** The `url` field is used for:
+
 - Open Graph meta tags
 - Sitemap generation
 - Robots.txt configuration
@@ -162,6 +163,7 @@ This file contains all the variables that populate your legal documents. Simply 
 #### Key Configuration Variables
 
 **Basic Information:**
+
 ```typescript
 APP_NAME: "Your App Name",
 COMPANY_NAME: "Your Company Inc.",
@@ -171,6 +173,7 @@ POLICY_VERSION: "1.0",
 ```
 
 **Contact & Legal:**
+
 ```typescript
 CONTACT_EMAIL: "support@yourapp.com",
 DISPUTE_EMAIL: "disputes@yourapp.com",
@@ -181,6 +184,7 @@ MINIMUM_AGE: "13",
 ```
 
 **Third-Party Services:**
+
 ```typescript
 ANALYTICS_SERVICES: ["Google Analytics", "Firebase", "Mixpanel"],
 ADVERTISING_PLATFORMS: ["Google Ads", "Facebook Ads"],
@@ -190,6 +194,7 @@ SOCIAL_MEDIA_PLATFORMS: ["Facebook", "Twitter", "Instagram"],
 ```
 
 **Policy-Specific Settings:**
+
 ```typescript
 REFUND_WINDOW_DAYS: "30",
 SUBSCRIPTION_REFUND_WINDOW_DAYS: "7",
@@ -249,6 +254,7 @@ ANALYTICS_SERVICES: [
 ### Sitemap
 
 The template automatically generates a sitemap at `/sitemap.xml`. It includes:
+
 - Your home page
 - Privacy page (if enabled)
 - Terms page (if enabled)
@@ -264,6 +270,7 @@ Located at `public/robots.txt`, the robots.txt file references your sitemap. The
 ### Meta Tags
 
 All pages include:
+
 - SEO meta tags (title, description, keywords)
 - Open Graph tags for social sharing
 - Twitter Card tags
@@ -282,12 +289,14 @@ siteMeta: {
 ```
 
 **Recommended formats:**
+
 - `.ico` format (supports multiple sizes: 16x16, 32x32, 48x48)
 - `.png` format (32x32px or 64x64px recommended)
 
 ### Adding App Store Badges
 
 The template includes official App Store and Google Play badges in `public/`:
+
 - `apple-app-store.svg`
 - `google-play.svg`
 
@@ -351,6 +360,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 ## Support
 
 If you have questions or need help:
+
 - 📫 [Open an issue](https://github.com/praveentcom/applaunch-wiki/issues)
 - 💬 Start a [discussion](https://github.com/praveentcom/applaunch-wiki/discussions) (if enabled)
 - ⭐ Star the repo if you find it helpful!
@@ -362,6 +372,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 Built with:
+
 - [Next.js](https://nextjs.org/) - The React Framework
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework
 - [passport-ui](https://www.npmjs.com/package/passport-ui) - UI component library

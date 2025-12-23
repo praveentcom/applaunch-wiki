@@ -1,13 +1,5 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
+import nextConfig from "eslint-config-next";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 const eslintConfig = [
   {
@@ -19,11 +11,10 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...nextConfig,
   {
     plugins: {
-      "simple-import-sort": (await import("eslint-plugin-simple-import-sort"))
-        .default,
+      "simple-import-sort": simpleImportSort,
     },
     rules: {
       "simple-import-sort/imports": "error",

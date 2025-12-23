@@ -1,10 +1,12 @@
 **AppLaunch Wiki** is designed to help you accomplish more with less effort. Built with a focus on simplicity and power, our app combines elegant design with robust functionality to deliver an experience you'll love.
 
-## Why Choose AppLaunch Wiki?
+> This is a demo for AppLaunch Wiki home page customizable with markdown located in the `data/content/home.md` file. The testimonials shown below are customizable with the `Testimonial` interface located in the `data/config/site.ts` file.
+
+### Why Choose AppLaunch Wiki?
 
 Experience the perfect blend of **intuitive design** and **powerful features** that adapts to your needs. Whether you're managing tasks, connecting with others, or tracking your progress, AppLaunch Wiki makes it effortless.
 
-### ✨ Key Features
+#### Key Features
 
 - **Lightning Fast** – Optimized performance that keeps up with your pace
 - **Seamless Sync** – Your data, accessible anywhere, anytime
@@ -12,6 +14,6 @@ Experience the perfect blend of **intuitive design** and **powerful features** t
 - **Privacy First** – Your data is encrypted and stays yours
 - **Beautiful Interface** – Designed with attention to every detail
 
-### 🚀 Get Started in Seconds
+#### Get Started in Seconds
 
 Download now and join thousands of users who have already transformed the way they work. Available on iOS and Android.

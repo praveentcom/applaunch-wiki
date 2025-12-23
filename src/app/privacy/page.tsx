@@ -1,20 +1,33 @@
-import { ContentContainer } from "passport-ui/content-container";
-import { Markdown } from "passport-ui/markdown";
-import { getMarkdownContent } from "@/lib/markdown";
+import { Markdown } from "@workspace/ui/components/markdown";
 import { Metadata } from "next";
+
+import { getMarkdownContent } from "@/components/markdown";
+
 import { siteConfig } from "../../../data/config/site";
 
+/**
+ * Metadata for the privacy policy page
+ * @returns Metadata for the privacy policy page
+ */
 export const metadata: Metadata = {
-  title: `${siteConfig.siteMeta?.title || 'App'} - Privacy Policy`,
-  description: siteConfig.siteMeta?.description || 'Privacy policy',
+  title: `${siteConfig.siteMeta?.title || "App"} - Privacy Policy`,
+  description: siteConfig.siteMeta?.description || "Privacy policy",
 };
 
+/**
+ * Privacy policy page component displaying the privacy policy content
+ * as configured in the site config.
+ * 
+ * 1. Privacy policy content
+ * 
+ * @returns Privacy policy page component
+ */
 export default function PrivacyPage() {
   const privacyContent = getMarkdownContent("privacy.md");
 
   return (
-    <ContentContainer variant="relaxed">
-      <Markdown content={privacyContent} />
-    </ContentContainer>
+    <div>
+      <Markdown content={privacyContent || ""} />
+    </div>
   );
 }

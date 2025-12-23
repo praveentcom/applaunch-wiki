@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-
+import { cn } from "@workspace/ui/lib/utils";
 import hljs from "highlight.js/lib/core";
 import bash from "highlight.js/lib/languages/bash";
 import cpp from "highlight.js/lib/languages/cpp";
@@ -34,8 +33,7 @@ import typescript from "highlight.js/lib/languages/typescript";
 import xml from "highlight.js/lib/languages/xml";
 import yaml from "highlight.js/lib/languages/yaml";
 import { Check, Copy } from "lucide-react";
-
-import { cn } from "@workspace/ui/lib/utils";
+import React, { useState } from "react";
 
 hljs.registerLanguage("javascript", javascript);
 hljs.registerLanguage("js", javascript);
@@ -123,6 +121,32 @@ export interface CodeBlockProps extends React.ComponentProps<"div"> {
   theme?: HighlightTheme;
 }
 
+interface CopyButtonProps {
+  copied: boolean;
+  onCopy: () => void;
+  className?: string;
+}
+
+function CopyButton({ copied, onCopy, className }: CopyButtonProps) {
+  return (
+    <button
+      onClick={onCopy}
+      className={cn(
+        "opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:text-foreground rounded hover:bg-muted/50",
+        className,
+      )}
+      title={copied ? "Copied!" : "Copy code"}
+      aria-label={copied ? "Copied!" : "Copy code"}
+    >
+      {copied ? (
+        <Check className="text-success" size={13.5} />
+      ) : (
+        <Copy size={13.5} />
+      )}
+    </button>
+  );
+}
+
 /**
  * A syntax-highlighted code block component with optional filename header and line numbers
  *
@@ -161,24 +185,6 @@ function CodeBlock({
       console.error("Failed to copy code: ", err);
     }
   };
-
-  const CopyButton = ({ className }: { className?: string }) => (
-    <button
-      onClick={copyToClipboard}
-      className={cn(
-        "opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:text-foreground rounded hover:bg-muted/50",
-        className,
-      )}
-      title={copied ? "Copied!" : "Copy code"}
-      aria-label={copied ? "Copied!" : "Copy code"}
-    >
-      {copied ? (
-        <Check className="text-success" size={13.5} />
-      ) : (
-        <Copy size={13.5} />
-      )}
-    </button>
-  );
 
   /**
    * Get the width class for line numbers based on total lines
@@ -277,7 +283,11 @@ function CodeBlock({
       {...props}
     >
       {!filename && (
-        <CopyButton className="absolute top-2 right-2 z-10 p-1.5 backdrop-blur-md border border-border/50" />
+        <CopyButton
+          copied={copied}
+          onCopy={copyToClipboard}
+          className="absolute top-2 right-2 z-10 p-1.5 backdrop-blur-md border border-border/50"
+        />
       )}
       {filename && (
         <div
@@ -298,7 +308,7 @@ function CodeBlock({
             </span>
           </div>
           <div className="flex gap-2 items-center">
-            <CopyButton />
+            <CopyButton copied={copied} onCopy={copyToClipboard} />
           </div>
         </div>
       )}

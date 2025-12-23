@@ -1,23 +1,35 @@
-import { ContentContainer } from "passport-ui/content-container";
-import { Button } from "passport-ui/button";
-import Link from "next/link";
+import { Home, Newspaper } from "lucide-react";
+import type { Metadata } from "next";
+import { Button } from "@workspace/ui/components/button";
+import { Card, CardContent } from "@workspace/ui/components/card";
+import { PrefetchLink } from "@workspace/ui/components/prefetch-link";
+import { plural } from "pluralize";
 
 export default function NotFound() {
   return (
-    <ContentContainer variant="relaxed">
-      <div className="flex flex-col items-center justify-center min-h-[60vh] gap-6 text-center">
-        <div className="space-y-2">
-          <h1 className="text-6xl font-bold">404</h1>
-          <h2 className="text-2xl font-semibold">Page Not Found</h2>
-          <p className="text-muted-foreground max-w-md">
-            Sorry, we couldn&apos;t find the page you&apos;re looking for. It might have been moved or deleted.
-          </p>
-        </div>
-        <Link href="/">
-          <Button variant="primary">Return Home</Button>
-        </Link>
+    <div>
+      <div className="flex items-center justify-center">
+        <Card className="w-full">
+          <CardContent className="grid gap-6">
+            <div className="flex flex-col text-center">
+              <h2>404</h2>
+              <h4>You&apos;re lost in space.</h4>
+              <p className="text-muted-foreground">
+                The page you&apos;re looking for doesn&apos;t exist or has been
+                moved.
+              </p>
+            </div>
+            <div className="flex flex-col items-center md:flex-row mx-auto gap-3 justify-center w-full">
+              <PrefetchLink href="/">
+                <Button>
+                  <Home />
+                  Home
+                </Button>
+              </PrefetchLink>
+            </div>
+          </CardContent>
+        </Card>
       </div>
-    </ContentContainer>
+    </div>
   );
 }
-

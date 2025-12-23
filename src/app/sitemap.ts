@@ -1,8 +1,8 @@
 import { MetadataRoute } from 'next'
-import { siteConfig } from '@/config/site'
+import { siteConfig } from '../../data/config/site'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = siteConfig.opengraph?.url || 'https://example.com'
+  const baseUrl = siteConfig.opengraph?.url || ''
 
   // Base routes that are always included
   const routes = [

@@ -1,19 +1,19 @@
-import { ContentContainer } from "passport-ui/content-container";
-import { Markdown } from "passport-ui/markdown";
 import { Landing } from "@/components/landing";
 import { Testimonials } from "@/components/testimonials";
-import { Separator } from "passport-ui/separator";
-import { getMarkdownContent } from "@/lib/markdown";
+import { Separator } from "@workspace/ui/components/separator";
+import { Markdown } from "@workspace/ui/components/markdown";
+import { getMarkdownContent } from "@/components/markdown";
 
-export default function Home() {
+
+export default function HomePage() {
   const homeContent = getMarkdownContent("home.md");
 
   return (
-    <ContentContainer variant="relaxed">
+    <div>
       <Landing />
       <Separator />
-      <Markdown content={homeContent} />
+      <Markdown content={homeContent || ""} />
       <Testimonials />
-    </ContentContainer>
+    </div>
   );
 }

@@ -1,7 +1,19 @@
 "use client";
 
-import { ThemeProvider } from "passport-ui/theme-provider";
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return (
+    <NextThemesProvider
+      {...{
+        attribute: "class",
+        defaultTheme: "system",
+        enableSystem: true,
+        disableTransitionOnChange: true,
+        enableColorScheme: true,
+        children,
+      }}
+    />
+  );
 }

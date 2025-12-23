@@ -1,6 +1,6 @@
 "use client";
-import { siteConfig } from "@/config/site";
-import { Card, CardContent } from "passport-ui/card";
+import { siteConfig } from "../../../data/config/site";
+import { Card, CardContent } from "@workspace/ui/components/card";
 import Image from "next/image";
 
 export const Testimonials = () => {

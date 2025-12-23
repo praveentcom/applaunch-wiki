@@ -1,7 +1,7 @@
 import { ContentContainer } from "passport-ui/content-container";
 import { Markdown } from "passport-ui/markdown";
 import { Metadata } from "next";
-import { siteConfig, PricingPlan } from "@/config/site";
+import { siteConfig, PricingPlan } from "../../../data/config/site";
 import { getMarkdownContent } from "@/lib/markdown";
 import { Separator } from "passport-ui/separator";
 

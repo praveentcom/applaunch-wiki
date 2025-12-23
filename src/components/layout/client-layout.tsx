@@ -1,110 +1,26 @@
 "use client";
 
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "passport-ui/navigation-menu";
-import { PageLayout } from "passport-ui/page-layout";
-import {
-  SidebarProvider,
-} from "passport-ui/sidebar";
-import { ThemeButton } from "passport-ui/theme-button";
-import { siteConfig } from "@/config/site";
-import Image from "next/image";
-
-import { Footer } from "./Footer";
-import { PrefetchLink } from "passport-ui/prefetch-link";
-
-export function ClientLayoutInner({ children }: { children: React.ReactNode }) {
-  return (
-    <PageLayout
-      header={
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <PrefetchLink href="/" className="flex items-center gap-3">
-              {siteConfig.siteMeta?.logo && (
-                <Image
-                  src={siteConfig.siteMeta.logo}
-                  alt={`${siteConfig.siteMeta?.title || 'App'} logo`}
-                  width={64}
-                  height={64}
-                  className="size-8 rounded-sm"
-                />
-              )}
-              <h3>{siteConfig.siteMeta?.title || 'App'}</h3>
-            </PrefetchLink>
-          </div>
-          <div className="flex items-center gap-3">
-            <NavigationMenu className="hidden md:block">
-              <NavigationMenuList className="gap-2">
-                <NavigationMenuItem>
-                  <NavigationMenuLink href="/">Home</NavigationMenuLink>
-                </NavigationMenuItem>
-                {siteConfig.flags?.pricingPage && (
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="/pricing">Pricing</NavigationMenuLink>
-                  </NavigationMenuItem>
-                )}
-                {siteConfig.flags?.privacyPolicy && (
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="/privacy">Privacy</NavigationMenuLink>
-                  </NavigationMenuItem>
-                )}
-                {siteConfig.flags?.termsOfService && (
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="/terms">Terms</NavigationMenuLink>
-                  </NavigationMenuItem>
-                )}
-                {siteConfig.flags?.cookiePolicy && (
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="/cookies">Cookies</NavigationMenuLink>
-                  </NavigationMenuItem>
-                )}
-                {siteConfig.flags?.refundPolicy && (
-                  <NavigationMenuItem>
-                    <NavigationMenuLink href="/refund">Refund</NavigationMenuLink>
-                  </NavigationMenuItem>
-                )}
-                {siteConfig.customLinks?.header?.map((link, index) => (
-                  <NavigationMenuItem key={index}>
-                    <NavigationMenuLink 
-                      href={link.href}
-                      {...(link.external && { target: "_blank", rel: "noopener noreferrer" })}
-                    >
-                      {link.label}
-                    </NavigationMenuLink>
-                  </NavigationMenuItem>
-                ))}
-              </NavigationMenuList>
-            </NavigationMenu>
-            <ThemeButton minimal align="end" />
-          </div>
-        </div>
-      }
-      headerOptions={{
-        variant: "relaxed",
-        sticky: true,
-        blurred: true,
-        revealStylesOnScroll: true,
-      }}
-      footer={<Footer />}
-      footerOptions={{
-        variant: "relaxed",
-        sticky: true,
-        blurred: true
-      }}
-    >
-      {children}
-    </PageLayout>
-  );
-}
+import { Header } from "./header";
+import { Footer } from "./footer";
+import { HeaderContainer } from "@workspace/ui/layouts/header-container";
+import { FooterContainer } from "@workspace/ui/layouts/footer-container";
+import { ContentContainer } from "@workspace/ui/layouts/content-container";
 
 export function ClientLayout({ children }: { children: React.ReactNode }) {
   return (
-    <SidebarProvider>
-      <ClientLayoutInner>{children}</ClientLayoutInner>
-    </SidebarProvider>
+    <main
+      data-slot="page-layout"
+      className="min-h-dvh w-full max-h-screen overflow-y-auto"
+    >
+      <div className="flex flex-col min-h-dvh">
+        <HeaderContainer sticky variant="compact">
+          <Header />
+        </HeaderContainer>
+        <ContentContainer variant="compact">{children}</ContentContainer>
+        <FooterContainer variant="compact">
+          <Footer />
+        </FooterContainer>
+      </div>
+    </main>
   );
 }

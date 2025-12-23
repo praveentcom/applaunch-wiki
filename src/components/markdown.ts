@@ -1,6 +1,6 @@
-import fs from 'fs';
 import path from 'path';
-import { policyConfig } from '@/config/policy';
+import fs from 'fs';
+import { policyConfig } from '@/data/config/policy';
 
 /**
  * Formats a config value for markdown substitution.
@@ -21,7 +21,6 @@ function formatValue(value: string | readonly string[], format: 'inline' | 'list
   
   return value.join(', ');
 }
-
 /**
  * Reads markdown content from the content directory and substitutes placeholders
  * with values from the policy configuration.

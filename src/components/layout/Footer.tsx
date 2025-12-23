@@ -1,7 +1,7 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
-import { PrefetchLink } from "passport-ui/prefetch-link";
+import { siteConfig } from "../../../data/config/site";
+import { PrefetchLink } from "@workspace/ui/components/prefetch-link";
 
 export function Footer() {
   return (

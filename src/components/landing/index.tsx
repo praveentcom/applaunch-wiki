@@ -1,8 +1,8 @@
 "use client";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "../../../data/config/site";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "passport-ui/button";
+import { Button } from "@workspace/ui/components/button";
 
 function isImageAvailable(): boolean {
   if (!siteConfig.heroSection?.screenshot) return false;

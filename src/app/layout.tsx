@@ -1,18 +1,19 @@
-import { ClientLayout } from "@/components/layout/client-layout";
-import "./styles/globals.css";
+import "./globals.css";
 
 import type { Metadata } from "next";
-import { ThemeProvider } from "passport-ui/theme-provider";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "../../data/config/site";
+import { Google_Sans_Flex, Google_Sans_Code } from "next/font/google";
 
-// Extract App Store ID from iOS URL if available
+import { Providers } from "@/components/providers";
+
+import { ClientLayout } from "@/components/layout/client-layout";
+
 const getAppStoreId = (url: string | undefined | null): string | null => {
   if (!url) return null;
   const match = url.match(/id(\d+)/);
   return match ? match[1] : null;
 };
 
-// Extract Android package name from Play Store URL if available
 const getAndroidPackageName = (url: string | undefined | null): string | null => {
   if (!url) return null;
   const match = url.match(/id=([^&]+)/);
@@ -73,6 +74,20 @@ export const metadata: Metadata = {
   },
 };
 
+const fontSans = Google_Sans_Flex({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+  adjustFontFallback: false,
+});
+
+const fontMono = Google_Sans_Code({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+  adjustFontFallback: false,
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -81,16 +96,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`min-h-screen flex flex-col max-w-full overflow-x-hidden`}
+        className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased min-h-screen flex flex-col max-w-full overflow-x-hidden`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+        <Providers>
           <ClientLayout>{children}</ClientLayout>
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

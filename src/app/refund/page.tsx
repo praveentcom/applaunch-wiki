@@ -17,15 +17,13 @@ export const metadata: Metadata = {
 /**
  * Refund policy page component displaying the refund policy content
  * as configured in the site config.
- * 
+ *
  * 1. Refund policy content
- * 
+ *
  * @returns Refund policy page component
  */
 export default function RefundPage() {
   const refundContent = getMarkdownContent("refund.md");
 
-  return (
-    <Markdown content={refundContent || ""} />
-  );
+  return <Markdown content={refundContent || ""} />;
 }

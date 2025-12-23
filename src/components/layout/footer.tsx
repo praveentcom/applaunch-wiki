@@ -1,14 +1,14 @@
 "use client";
 
+import { Button } from "@workspace/ui/components/button";
 import { PrefetchLink } from "@workspace/ui/components/prefetch-link";
 
 import { siteConfig } from "../../../data/config/site";
-import { Button } from "@workspace/ui/components/button";
 
 /**
  * Footer component displaying the footer label and applicable links
  * as configured in the site config.
- * 
+ *
  * @returns Footer component
  */
 export function Footer() {
@@ -26,48 +26,28 @@ export function Footer() {
       </div>
       <div className="grid grid-cols-2 items-center justify-between text-center md:text-left">
         {siteConfig.flags?.pricingPage && (
-          <PrefetchLink
-            href="/pricing"
-          >
-            <Button variant="ghost">
-              Pricing
-            </Button>
+          <PrefetchLink href="/pricing">
+            <Button variant="ghost">Pricing</Button>
           </PrefetchLink>
         )}
         {siteConfig.flags?.privacyPolicy && (
-          <PrefetchLink
-            href="/privacy"
-          >
-            <Button variant="ghost">
-              Privacy
-            </Button>
+          <PrefetchLink href="/privacy">
+            <Button variant="ghost">Privacy</Button>
           </PrefetchLink>
         )}
         {siteConfig.flags?.termsOfService && (
-          <PrefetchLink
-            href="/terms"
-          >
-            <Button variant="ghost">
-              Terms
-            </Button>
+          <PrefetchLink href="/terms">
+            <Button variant="ghost">Terms</Button>
           </PrefetchLink>
         )}
         {siteConfig.flags?.cookiePolicy && (
-          <PrefetchLink
-            href="/cookies"
-          >
-            <Button variant="ghost">
-              Cookies
-            </Button>
+          <PrefetchLink href="/cookies">
+            <Button variant="ghost">Cookies</Button>
           </PrefetchLink>
         )}
         {siteConfig.flags?.refundPolicy && (
-          <PrefetchLink
-            href="/refund"
-          >
-            <Button variant="ghost">
-              Refund
-            </Button>
+          <PrefetchLink href="/refund">
+            <Button variant="ghost">Refund</Button>
           </PrefetchLink>
         )}
         {siteConfig.customLinks?.footer?.map((link, index) =>
@@ -78,18 +58,11 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="ghost">
-                {link.label}
-              </Button>
+              <Button variant="ghost">{link.label}</Button>
             </a>
           ) : (
-            <PrefetchLink
-              key={index}
-              href={link.href}
-            >
-              <Button variant="ghost">
-                {link.label}
-              </Button>
+            <PrefetchLink key={index} href={link.href}>
+              <Button variant="ghost">{link.label}</Button>
             </PrefetchLink>
           ),
         )}

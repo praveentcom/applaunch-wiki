@@ -28,7 +28,7 @@ import { siteConfig } from "@/data/config/site";
 /**
  * Header component displaying the header label and applicable links
  * as configured in the site config.
- * 
+ *
  * @returns Header component
  */
 export function Header() {
@@ -137,11 +137,7 @@ export function Header() {
                 )}
               >
                 {item.external ? (
-                  <a
-                    href={item.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={item.href} target="_blank" rel="noopener noreferrer">
                     {item.label}
                   </a>
                 ) : (

@@ -5,7 +5,6 @@
 
 > This is a demo for AppLaunch Wiki cookie policy page customizable with markdown located in the `data/content/cookies.md` file. The template variables can be adjusted in the `data/config/policy.ts` file.
 
-
 {{APP_NAME}} ("we," "us," "our," or "{{COMPANY_NAME}}") uses cookies, web beacons, pixels, mobile identifiers, and similar tracking technologies on our website and mobile application (collectively, the "App" or "Services"). This Cookie Policy explains what these technologies are, how and why we use them, what information they collect, and your choices regarding their use.
 
 This Cookie Policy should be read in conjunction with our [Privacy Policy]({{PRIVACY_POLICY_URL}}) and [Terms of Service]({{TERMS_URL}}).

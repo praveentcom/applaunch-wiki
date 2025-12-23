@@ -5,14 +5,14 @@ import { siteConfig } from "../../data/config/site";
 /**
  * Sitemap component generating the sitemap for the website. The list of
  * routes is generated based on the flags configured in the site config.
- * 
+ *
  * 1. Home page
  * 2. Pricing page (if enabled)
  * 3. Privacy page (if enabled)
  * 4. Terms page (if enabled)
  * 5. Cookie page (if enabled)
  * 6. Refund page (if enabled)
- * 
+ *
  * @returns Sitemap component
  */
 export default function sitemap(): MetadataRoute.Sitemap {

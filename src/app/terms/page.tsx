@@ -17,15 +17,13 @@ export const metadata: Metadata = {
 /**
  * Terms of service page component displaying the terms of service content
  * as configured in the site config.
- * 
+ *
  * 1. Terms of service content
- * 
+ *
  * @returns Terms of service page component
  */
 export default function TermsPage() {
   const termsContent = getMarkdownContent("terms.md");
 
-  return (
-    <Markdown content={termsContent || ""} />
-  );
+  return <Markdown content={termsContent || ""} />;
 }

@@ -5,7 +5,6 @@
 
 > This is a demo for AppLaunch Wiki refund policy page customizable with markdown located in the `data/content/refund.md` file. The template variables can be adjusted in the `data/config/policy.ts` file.
 
-
 Thank you for choosing **APP_NAME**! This Refund Policy ("Policy") explains our policies and procedures regarding refunds, cancellations, billing, and subscription management for purchases made through our mobile application (the "App").
 
 This Policy should be read in conjunction with our [Terms of Service](__TERMS_URL__) and [Privacy Policy](__PRIVACY_POLICY_URL__).

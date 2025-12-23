@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 /**
  * Privacy policy page component displaying the privacy policy content
  * as configured in the site config.
- * 
+ *
  * 1. Privacy policy content
- * 
+ *
  * @returns Privacy policy page component
  */
 export default function PrivacyPage() {

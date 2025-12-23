@@ -5,7 +5,6 @@
 
 > This is a demo for AppLaunch Wiki terms of service page customizable with markdown located in the `data/content/terms.md` file. The template variables can be adjusted in the `data/config/policy.ts` file.
 
-
 Welcome to {{APP_NAME}}! These Terms of Service ("Terms," "Agreement," or "TOS") constitute a legally binding agreement between you ("you," "your," or "User") and {{COMPANY_NAME}} ("we," "us," "our," or "Company") governing your access to and use of the {{APP_NAME}} mobile application and related services (collectively, the "App," "Service," or "Services").
 
 **IMPORTANT:** PLEASE READ THESE TERMS CAREFULLY BEFORE USING THE APP. BY DOWNLOADING, INSTALLING, ACCESSING, OR USING {{APP_NAME}}, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THESE TERMS AND OUR PRIVACY POLICY. IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE THE APP.

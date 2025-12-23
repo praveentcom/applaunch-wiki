@@ -5,7 +5,6 @@
 
 > This is a demo for AppLaunch Wiki privacy policy page customizable with markdown located in the `data/content/privacy.md` file. The template variables can be adjusted in the `data/config/policy.ts` file.
 
-
 {{APP_NAME}} ("we," "us," "our," or "{{COMPANY_NAME}}") operates the {{APP_NAME}} mobile application and related services (collectively, the "App" or "Services"). This Privacy Policy explains how we collect, use, disclose, process, and safeguard your personal information when you use our App.
 
 By using {{APP_NAME}}, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your information as described herein.

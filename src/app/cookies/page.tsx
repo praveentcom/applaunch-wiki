@@ -17,9 +17,9 @@ export const metadata: Metadata = {
 /**
  * Cookie policy page component displaying the cookie policy content
  * as configured in the site config.
- * 
+ *
  * 1. Cookie policy content
- * 
+ *
  * @returns Cookie policy page component
  */
 export default function CookiesPage() {

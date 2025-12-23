@@ -118,7 +118,11 @@ export const siteConfig: SiteConfig = {
           "Custom integrations",
           "SLA guarantee",
         ],
-        ctaLink: { href: "mailto:sales@example.com", label: "Contact Sales", external: true },
+        ctaLink: {
+          href: "mailto:sales@example.com",
+          label: "Contact Sales",
+          external: true,
+        },
       },
     ],
   },

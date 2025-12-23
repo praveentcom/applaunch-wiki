@@ -91,10 +91,10 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
 /**
  * Pricing page component displaying the pricing content
  * as configured in the site config.
- * 
+ *
  * 1. Pricing content
  * 2. Pricing cards
- * 
+ *
  * @returns Pricing page component
  */
 export default function PricingPage() {

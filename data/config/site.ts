@@ -83,6 +83,7 @@ export const siteConfig: SiteConfig = {
           currency: "$",
         },
         features: ["Basic features", "Community support", "Limited usage"],
+        ctaLink: { href: "/signup", label: "Start Free" },
       },
       {
         title: "Pro",
@@ -102,6 +103,7 @@ export const siteConfig: SiteConfig = {
           "Advanced features",
           "Unlimited usage",
         ],
+        ctaLink: { href: "/signup?plan=pro", label: "Get Started" },
       },
       {
         title: "Enterprise",
@@ -116,6 +118,7 @@ export const siteConfig: SiteConfig = {
           "Custom integrations",
           "SLA guarantee",
         ],
+        ctaLink: { href: "mailto:sales@example.com", label: "Contact Sales", external: true },
       },
     ],
   },
@@ -167,6 +170,11 @@ export interface PricingPlan {
     label?: string; // e.g., "Popular", "Recommended", "Best Value"
   };
   features: string[];
+  ctaLink?: {
+    href: string;
+    label?: string; // e.g., "Get Started", "Contact Sales" (defaults to "Get Started")
+    external?: boolean; // Opens in new tab if true
+  };
 }
 
 export interface Testimonial {

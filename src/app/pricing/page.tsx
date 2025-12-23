@@ -1,6 +1,8 @@
+import { Button } from "@workspace/ui/components/button";
 import { Markdown } from "@workspace/ui/components/markdown";
 import { Separator } from "@workspace/ui/components/separator";
 import { Metadata } from "next";
+import Link from "next/link";
 
 import { getMarkdownContent } from "@/components/markdown";
 
@@ -65,6 +67,23 @@ function PricingCard({ plan }: { plan: PricingPlan }) {
           </li>
         ))}
       </ul>
+      {plan.ctaLink && (
+        <Button
+          asChild
+          variant={isFeatured ? "default" : "secondary"}
+          className="w-full mt-4"
+        >
+          <Link
+            href={plan.ctaLink.href}
+            {...(plan.ctaLink.external && {
+              target: "_blank",
+              rel: "noopener noreferrer",
+            })}
+          >
+            {plan.ctaLink.label || "Get Started"}
+          </Link>
+        </Button>
+      )}
     </div>
   );
 }

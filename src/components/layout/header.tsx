@@ -77,7 +77,7 @@ export function Header() {
 
   return (
     <div className="flex items-center justify-between">
-      <PrefetchLink href={pathname === "/" ? "/about" : "/"}>
+      <PrefetchLink href="/">
         <div className="flex gap-2">
           <Image
             src={siteConfig.siteMeta?.logo}

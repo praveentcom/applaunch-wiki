@@ -13,6 +13,7 @@ export const siteConfig: SiteConfig = {
     author: "AppLaunch Wiki Team",
     legalEntity: "AppLaunch Wiki Inc.",
     logo: "/logo.png",
+    logoDark: "/logo-dark.png",
     favicon: "/favicon.ico",
   },
   twitter: {
@@ -197,6 +198,7 @@ export interface SiteConfig {
     author: string;
     legalEntity: string;
     logo: string;
+    logoDark?: string; // Optional: dark mode logo variant (falls back to logo if not set)
     favicon: string;
   };
   twitter: {

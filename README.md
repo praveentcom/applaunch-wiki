@@ -47,6 +47,7 @@ siteMeta: {
   keywords: ["keyword1", "keyword2"],
   author: "Your Name or Company",
   logo: "/logo.png", // Optional: 64x64px recommended
+  logoDark: "/logo-dark.png", // Optional: dark mode variant (falls back to logo if not set)
   favicon: "/favicon.ico", // URL to your favicon (.ico or .png)
 }
 ```
@@ -327,7 +328,7 @@ Before deploying your site, make sure you've:
 - [ ] Added any custom header/footer links (if needed)
 - [ ] Replaced all template variables in policy files (search for `{{` in all `.md` files)
 - [ ] Removed unused policy pages or set their flags to `false`
-- [ ] Added your app logo (if using one)
+- [ ] Added your app logo (if using one, optionally add a dark variant as `logoDark`)
 - [ ] Added your favicon to `public/` and configured it in `siteMeta.favicon`
 - [ ] Added app screenshots
 - [ ] Updated `src/content/home.md` with your app's content

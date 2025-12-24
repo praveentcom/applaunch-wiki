@@ -37,6 +37,13 @@ export function Header() {
   const pathname = usePathname();
   const isActive = (href: string) => pathname?.startsWith(href);
 
+  const currentLogo = useMemo(() => {
+    if (resolvedTheme === "dark" && siteConfig.siteMeta?.logoDark) {
+      return siteConfig.siteMeta.logoDark;
+    }
+    return siteConfig.siteMeta?.logo;
+  }, [resolvedTheme]);
+
   const navItems = useMemo(() => {
     const items: { label: string; href: string; external?: boolean }[] = [];
 
@@ -80,7 +87,7 @@ export function Header() {
       <PrefetchLink href="/">
         <div className="flex gap-2">
           <Image
-            src={siteConfig.siteMeta?.logo}
+            src={currentLogo}
             alt={siteConfig.siteMeta?.title}
             width={32}
             height={32}

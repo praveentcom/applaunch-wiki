@@ -55,6 +55,7 @@ export const policyConfig = {
   CURRENCY: "USD",
   MINIMUM_LIABILITY_AMOUNT: "$100",
   COMPANY_ADDRESS: "123 Main Street, San Francisco, CA 94102, United States",
+  PHONE_NUMBER: "+1 (415) 555-1234", // Phone number for contact us
 
   // Privacy Policy Specific
   ADDITIONAL_PERSONAL_INFO: [

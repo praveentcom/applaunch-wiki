@@ -476,7 +476,7 @@ If you have any questions, concerns, or requests regarding this Privacy Policy o
 **Email:** {{CONTACT_EMAIL}}  
 **Address:** {{COMPANY_ADDRESS}}  
 **Website:** {{WEBSITE_URL}}  
-**Phone:** [Phone Number]
+**Phone:** {{PHONE_NUMBER}}
 
 **Data Protection Officer:** {{DPO_EMAIL}}
 

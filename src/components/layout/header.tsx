@@ -21,7 +21,7 @@ import { Menu } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { siteConfig } from "@/data/config/site";
 
@@ -33,16 +33,25 @@ import { siteConfig } from "@/data/config/site";
  */
 export function Header() {
   const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   const pathname = usePathname();
   const isActive = (href: string) => pathname?.startsWith(href);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const currentLogo = useMemo(() => {
+    if (!mounted) {
+      return siteConfig.siteMeta?.logo;
+    }
+
     if (resolvedTheme === "dark" && siteConfig.siteMeta?.logoDark) {
       return siteConfig.siteMeta.logoDark;
     }
     return siteConfig.siteMeta?.logo;
-  }, [resolvedTheme]);
+  }, [mounted, resolvedTheme]);
 
   const navItems = useMemo(() => {
     const items: { label: string; href: string; external?: boolean }[] = [];

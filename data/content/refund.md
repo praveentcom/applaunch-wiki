@@ -1,13 +1,11 @@
 # Refund Policy
 
-**Effective Date:** **EFFECTIVE_DATE**  
-**Last Updated:** **LAST_UPDATED_DATE**
+**Effective Date:** {{EFFECTIVE_DATE}}  
+**Last Updated:** {{LAST_UPDATED_DATE}}
 
-> This is a demo for AppLaunch Wiki refund policy page customizable with markdown located in the `data/content/refund.md` file. The template variables can be adjusted in the `data/config/policy.ts` file.
+Thank you for choosing {{APP_NAME}}! This Refund Policy ("Policy") explains our policies and procedures regarding refunds, cancellations, billing, and subscription management for purchases made through our mobile application (the "App").
 
-Thank you for choosing **APP_NAME**! This Refund Policy ("Policy") explains our policies and procedures regarding refunds, cancellations, billing, and subscription management for purchases made through our mobile application (the "App").
-
-This Policy should be read in conjunction with our [Terms of Service](__TERMS_URL__) and [Privacy Policy](__PRIVACY_POLICY_URL__).
+This Policy should be read in conjunction with our [Terms of Service]({{TERMS_URL}}) and [Privacy Policy]({{PRIVACY_POLICY_URL}}).
 
 **Please read this Policy carefully before making any purchases. By making a purchase through the App, you acknowledge that you have read, understood, and agree to this Refund Policy.**
 
@@ -15,19 +13,19 @@ This Policy should be read in conjunction with our [Terms of Service](__TERMS_UR
 
 ### 1.1 Third-Party Processing
 
-**APP_NAME** is distributed through third-party mobile app stores:
+{{APP_NAME}} is distributed through third-party mobile app stores:
 
 - **Apple App Store** (for iOS devices: iPhone, iPad, iPod Touch)
 - **Google Play Store** (for Android devices)
 
-All financial transactions, including purchases, subscriptions, in-app purchases, and refunds, are processed and managed by these app store platforms, not directly by **COMPANY_NAME**.
+All financial transactions, including purchases, subscriptions, in-app purchases, and refunds, are processed and managed by these app store platforms, not directly by {{COMPANY_NAME}}.
 
 ### 1.2 Dual Policy Structure
 
 Refunds are subject to:
 
 1. **App Store Policies:** Apple's and Google's respective refund policies
-2. **Our Policy:** **APP_NAME**'s refund eligibility criteria as outlined below
+2. **Our Policy:** {{APP_NAME}}'s refund eligibility criteria as outlined below
 
 Both policies apply to your purchase. In cases of conflict, consumer protection laws in your jurisdiction will prevail.
 
@@ -39,7 +37,7 @@ Both policies apply to your purchase. In cases of conflict, consumer protection 
 
 ### 1.4 Currency and Payment Methods
 
-- All prices are displayed in **CURRENCY** unless otherwise indicated
+- All prices are displayed in {{CURRENCY}} unless otherwise indicated
 - Refunds will be issued in the currency of the original purchase
 - Refunds are returned to the original payment method used for purchase
 - Currency exchange rates may differ between purchase and refund, potentially affecting the amount received
@@ -130,7 +128,7 @@ Google LLC processes all payments for Android users. Google Play's refund policy
 
 - **Within 2 Hours:** Automatic refund eligibility; immediate refund typically granted
 - **Within 48 Hours:** Refund requests reviewed by Google on a case-by-case basis
-- **After 48 Hours:** Contact the developer (**APP_NAME**)
+- **After 48 Hours:** Contact the developer ({{APP_NAME}})
 
 **Subscriptions:**
 
@@ -157,9 +155,9 @@ Google LLC processes all payments for Android users. Google Play's refund policy
 - Google Play Terms: https://play.google.com/intl/en_us/about/play-terms/
 - Google Play Help Center: https://support.google.com/googleplay
 
-## 3. **APP_NAME** Refund Eligibility Criteria
+## 3. {{APP_NAME}} Refund Eligibility Criteria
 
-While app store policies govern the refund process, **COMPANY_NAME** has established clear guidelines for when refunds are appropriate. We are committed to customer satisfaction and will work with you to resolve any legitimate issues.
+While app store policies govern the refund process, {{COMPANY_NAME}} has established clear guidelines for when refunds are appropriate. We are committed to customer satisfaction and will work with you to resolve any legitimate issues.
 
 ### 3.1 Situations Eligible for Refund
 
@@ -172,7 +170,7 @@ We consider the following circumstances as legitimate grounds for a refund:
 - **Performance Degradation:** Severe performance issues that make the App unusable
 - **Feature Malfunction:** Paid features do not work as advertised or described
 - **Compatibility Issues:** The App does not work on devices listed as compatible in the app store
-- **Resolution Efforts:** You contacted our support team, and we were unable to resolve the issue within a reasonable timeframe (**REFUND_REVIEW_DAYS** business days)
+- **Resolution Efforts:** You contacted our support team, and we were unable to resolve the issue within a reasonable timeframe ({{REFUND_REVIEW_DAYS}} business days)
 
 **Billing and Payment Errors:**
 
@@ -245,15 +243,15 @@ The following circumstances generally do not qualify for refunds:
 
 **One-Time Purchases (In-App Purchases, Content):**
 
-- **Optimal Window:** Within **REFUND_WINDOW_DAYS** days of purchase date
-- **Extended Consideration:** Requests beyond **REFUND_WINDOW_DAYS** days may be considered for technical issues documented within the timeframe
+- **Optimal Window:** Within {{REFUND_WINDOW_DAYS}} days of purchase date
+- **Extended Consideration:** Requests beyond {{REFUND_WINDOW_DAYS}} days may be considered for technical issues documented within the timeframe
 - **Maximum Window:** App store policies limit refunds to 90 days (Apple) or as specified by Google
 
 **Subscriptions:**
 
-- **Initial Subscription:** Within **SUBSCRIPTION_REFUND_WINDOW_DAYS** days of initial subscription charge
-- **Renewal Charges:** Within **SUBSCRIPTION_REFUND_WINDOW_DAYS** days of each renewal charge
-- **Free Trial Conversions:** Within **SUBSCRIPTION_REFUND_WINDOW_DAYS** days after free trial ends and paid subscription begins
+- **Initial Subscription:** Within {{SUBSCRIPTION_REFUND_WINDOW_DAYS}} days of initial subscription charge
+- **Renewal Charges:** Within {{SUBSCRIPTION_REFUND_WINDOW_DAYS}} days of each renewal charge
+- **Free Trial Conversions:** Within {{SUBSCRIPTION_REFUND_WINDOW_DAYS}} days after free trial ends and paid subscription begins
 
 **Important Notes:**
 
@@ -273,7 +271,7 @@ You have full control over your subscription and can cancel it at any time befor
 1. Open the **Settings** app on your device
 2. Tap your **Name** at the top
 3. Tap **Subscriptions**
-4. Select \***\*APP_NAME\*\*** from your list of subscriptions
+4. Select {{APP_NAME}} from your list of subscriptions
 5. Tap **Cancel Subscription** (or **Cancel Free Trial** if in trial period)
 6. Confirm the cancellation
 
@@ -282,7 +280,7 @@ You have full control over your subscription and can cancel it at any time befor
 1. Open the **App Store** app
 2. Tap your **Profile Icon** in the top right
 3. Tap **Subscriptions**
-4. Select \***\*APP_NAME\*\***
+4. Select {{APP_NAME}}
 5. Tap **Cancel Subscription**
 
 **Android (Google Play Store):**
@@ -290,7 +288,7 @@ You have full control over your subscription and can cancel it at any time befor
 1. Open the **Google Play Store** app
 2. Tap the **Menu** icon (≡) or your **Profile Icon**
 3. Tap **Payments & subscriptions** → **Subscriptions**
-4. Select \***\*APP_NAME\*\***
+4. Select {{APP_NAME}}
 5. Tap **Cancel subscription**
 6. Follow the on-screen instructions
 
@@ -298,7 +296,7 @@ You have full control over your subscription and can cancel it at any time befor
 
 1. Visit: https://play.google.com/store/account/subscriptions
 2. Sign in to your Google Account
-3. Find \***\*APP_NAME\*\***
+3. Find {{APP_NAME}}
 4. Click **Manage** → **Cancel Subscription**
 
 ### 4.2 Cancellation Policy and Effects
@@ -328,7 +326,7 @@ You have full control over your subscription and can cancel it at any time befor
 **Free Trial Management:**
 
 - **Trial Duration:** As specified at sign-up (typically 7, 14, or 30 days)
-- **Cancellation Deadline:** Cancel at least **TRIAL_CANCELLATION_PERIOD** before the trial ends to avoid being charged
+- **Cancellation Deadline:** Cancel at least {{TRIAL_CANCELLATION_PERIOD}} before the trial ends to avoid being charged
 - **Automatic Conversion:** If not canceled, the trial automatically converts to a paid subscription at the end of the trial period
 - **Payment Method Required:** Valid payment method must be on file even during the free trial
 - **One Trial Per User:** Free trials are typically limited to one per user/account
@@ -406,7 +404,7 @@ You have full control over your subscription and can cancel it at any time befor
 - We reserve the right to add, modify, or remove features from subscription tiers
 - We will provide notice of material changes to subscription features
 
-## 5. How to Request a Refund Directly from **APP_NAME**
+## 5. How to Request a Refund Directly from {{APP_NAME}}
 
 If you believe you qualify for a refund under our eligibility criteria, or if Apple/Google directs you to contact us, follow this process:
 
@@ -417,7 +415,7 @@ If you believe you qualify for a refund under our eligibility criteria, or if Ap
 1. **Check for Updates:** Ensure you have the latest version of the App
 2. **Restart the App:** Close and reopen the App
 3. **Restart Your Device:** Power cycle your device
-4. **Check Help Center:** Visit our help center at **SUPPORT_URL** for troubleshooting guides
+4. **Check Help Center:** Visit our help center at {{SUPPORT_URL}} for troubleshooting guides
 5. **Contact Support:** Many issues can be resolved quickly by our support team
 
 ### 5.2 Submitting a Refund Request
@@ -438,7 +436,7 @@ Before contacting us, collect the following:
 
 **Email (Preferred):**
 
-- Send an email to: **CONTACT_EMAIL**
+- Send an email to: {{CONTACT_EMAIL}}
 - Subject line: "Refund Request - [Your Name/Order ID]"
 - Include all required information listed above
 
@@ -450,13 +448,13 @@ Before contacting us, collect the following:
 
 **Web Form:**
 
-- Visit: **REFUND_REQUEST_URL**
+- Visit: {{REFUND_REQUEST_URL}}
 - Fill out the refund request form with required details
 
 **Step 3: Our Review Process**
 
 1. **Initial Response:** We will acknowledge your request within 24-48 hours
-2. **Review Period:** Our team will review your request within **REFUND_REVIEW_DAYS** business days
+2. **Review Period:** Our team will review your request within {{REFUND_REVIEW_DAYS}} business days
 3. **Additional Information:** We may request additional details or screenshots
 4. **Decision Notification:** We will email you our decision with an explanation
 5. **Processing:** If approved, we will initiate the refund process
@@ -470,16 +468,16 @@ Before contacting us, collect the following:
 - We will provide instructions for requesting a refund through Apple or Google
 - We may provide a letter of support to include with your app store refund request
 - We cannot guarantee app store approval, but we will advocate on your behalf
-- Processing time: **APP_STORE_PROCESSING_DAYS** business days from app store approval
+- Processing time: {{APP_STORE_PROCESSING_DAYS}} business days from app store approval
 
 **Direct Refunds (if applicable):**
 
 - In rare cases where we processed payment directly, we will issue a refund to your original payment method
-- Processing time: **DIRECT_REFUND_PROCESSING_DAYS** business days from our approval
+- Processing time: {{DIRECT_REFUND_PROCESSING_DAYS}} business days from our approval
 
 **Refund Methods by Payment Type:**
 
-- **Credit/Debit Card:** Refund appears within **CARD_REFUND_DAYS** business days
+- **Credit/Debit Card:** Refund appears within {{CARD_REFUND_DAYS}} business days
 - **PayPal:** Refund appears within 3-5 business days
 - **Apple Pay/Google Pay:** Refund appears within 5-10 business days
 - **Store Credit:** Processed immediately
@@ -504,7 +502,7 @@ Before contacting us, collect the following:
 **Your Options:**
 
 1. **Provide Additional Information:** If you have more evidence, reply to our decision email
-2. **Request a Review:** Ask for your case to be reviewed by a supervisor (email: **DISPUTE_EMAIL**)
+2. **Request a Review:** Ask for your case to be reviewed by a supervisor (email: {{DISPUTE_EMAIL}})
 3. **App Store Escalation:** You can still request a refund directly from Apple or Google
 4. **Payment Provider Dispute:** Contact your credit card company or payment provider (may result in account suspension)
 5. **Consumer Protection:** Contact your local consumer protection agency or ombudsman
@@ -612,7 +610,7 @@ Under EU Consumer Rights Directive and UK Consumer Contracts Regulations, you ha
 
 **How to Exercise Your Rights:**
 
-- Contact us at **CONTACT_EMAIL**
+- Contact us at {{CONTACT_EMAIL}}
 - Submit a withdrawal notice within 14 days
 - We will process refunds within 14 days of receiving your withdrawal notice
 
@@ -725,14 +723,14 @@ If you're in a jurisdiction not specifically mentioned:
 - **Apple Processing:** 5-10 business days after approval for funds to return
 - **Google (within 2 hours):** Instant or within minutes
 - **Google (within 48 hours):** 3-5 business days
-- **Google (after 48 hours):** **APP_STORE_PROCESSING_DAYS** business days
-- **Total Time:** Typically **APP_STORE_PROCESSING_DAYS** business days from request
+- **Google (after 48 hours):** {{APP_STORE_PROCESSING_DAYS}} business days
+- **Total Time:** Typically {{APP_STORE_PROCESSING_DAYS}} business days from request
 
-**Direct Refunds from **APP_NAME**:**
+**Direct Refunds from {{APP_NAME}}:**
 
-- **Review:** **REFUND_REVIEW_DAYS** business days to review your request
-- **Processing:** **DIRECT_REFUND_PROCESSING_DAYS** business days after approval
-- **Total Time:** Up to **REFUND_PROCESSING_DAYS** business days from request
+- **Review:** {{REFUND_REVIEW_DAYS}} business days to review your request
+- **Processing:** {{DIRECT_REFUND_PROCESSING_DAYS}} business days after approval
+- **Total Time:** Up to {{REFUND_PROCESSING_DAYS}} business days from request
 
 **Additional Bank Processing:**
 
@@ -746,8 +744,8 @@ Refunds are issued to the original payment method used for the purchase:
 
 **Credit/Debit Cards:**
 
-- Refund appears within **CARD_REFUND_DAYS** business days
-- Statement will show credit from Apple, Google, or **COMPANY_NAME**
+- Refund appears within {{CARD_REFUND_DAYS}} business days
+- Statement will show credit from Apple, Google, or {{COMPANY_NAME}}
 - Contact your card issuer if you don't see the credit after expected timeframe
 
 **Digital Wallets:**
@@ -843,7 +841,7 @@ Chargebacks may be appropriate in cases of:
 
 If you've filed a chargeback:
 
-- Contact us immediately at **DISPUTE_EMAIL**
+- Contact us immediately at {{DISPUTE_EMAIL}}
 - Provide documentation of the issue
 - We will work with you and your bank to resolve the dispute
 - If resolved in your favor, we may reinstate your account
@@ -927,34 +925,34 @@ For refund inquiries, billing questions, or assistance:
 
 **Email Support (Primary):**
 
-- **General Refunds:** **CONTACT_EMAIL**
-- **Dispute Resolution:** **DISPUTE_EMAIL**
-- **Technical Support:** **TECHNICAL_SUPPORT_EMAIL**
+- **General Refunds:** {{CONTACT_EMAIL}}
+- **Dispute Resolution:** {{DISPUTE_EMAIL}}
+- **Technical Support:** {{TECHNICAL_SUPPORT_EMAIL}}
 
 **Online Resources:**
 
-- **Help Center:** **SUPPORT_URL**
-- **Refund Request Form:** **REFUND_REQUEST_URL**
-- **FAQ:** **FAQ_URL**
-- **Contact Form:** **CONTACT_FORM_URL**
+- **Help Center:** {{SUPPORT_URL}}
+- **Refund Request Form:** {{REFUND_REQUEST_URL}}
+- **FAQ:** {{FAQ_URL}}
+- **Contact Form:** {{CONTACT_FORM_URL}}
 
 **In-App Support:**
 
-- Open **APP_NAME** → Settings → Help & Support → Contact Us
+- Open {{APP_NAME}} → Settings → Help & Support → Contact Us
 - Select the appropriate category (Billing & Refunds)
 - Submit your inquiry through the in-app form
 
 **Mailing Address:**
-**COMPANY_NAME**  
+{{COMPANY_NAME}}  
 Attention: Customer Support / Refunds Department  
-**COMPANY_ADDRESS**
+{{COMPANY_ADDRESS}}
 
 ### 12.2 Response Times
 
 **Email Inquiries:**
 
 - **Initial Response:** Within 24-48 hours (business days)
-- **Refund Review:** Within **REFUND_REVIEW_DAYS** business days
+- **Refund Review:** Within {{REFUND_REVIEW_DAYS}} business days
 - **Complex Issues:** May require additional time; we'll keep you updated
 
 **In-App Support:**
@@ -964,7 +962,7 @@ Attention: Customer Support / Refunds Department
 
 **Business Hours:**
 
-- Monday - Friday: 9:00 AM - 6:00 PM (**JURISDICTION** time)
+- Monday - Friday: 9:00 AM - 6:00 PM ({{JURISDICTION}} time)
 - We respond to messages outside business hours on the next business day
 - Holidays may affect response times
 
@@ -990,7 +988,7 @@ To help us assist you quickly, please include:
 
 We value your feedback! If you have suggestions for improving our refund policy or process:
 
-- Email: **FEEDBACK_EMAIL**
+- Email: {{FEEDBACK_EMAIL}}
 - In-App: Settings → Help & Support → Provide Feedback
 - We review all feedback and use it to improve our services
 
@@ -998,14 +996,14 @@ We value your feedback! If you have suggestions for improving our refund policy 
 
 ## Thank You
 
-Thank you for being a valued user of **APP_NAME**! We are committed to providing you with an excellent experience and fair treatment. If you have any questions about this Refund Policy or need assistance with a purchase, please don't hesitate to contact us. We're here to help!
+Thank you for being a valued user of {{APP_NAME}}! We are committed to providing you with an excellent experience and fair treatment. If you have any questions about this Refund Policy or need assistance with a purchase, please don't hesitate to contact us. We're here to help!
 
 ---
 
-**Effective Date:** **EFFECTIVE_DATE**  
-**Last Updated:** **LAST_UPDATED_DATE**  
-**Version:** **POLICY_VERSION**
+**Effective Date:** {{EFFECTIVE_DATE}}  
+**Last Updated:** {{LAST_UPDATED_DATE}}  
+**Version:** {{POLICY_VERSION}}
 
-**Company:** **COMPANY_NAME**  
-**Website:** **WEBSITE_URL**  
-**Email:** **CONTACT_EMAIL**
+**Company:** {{COMPANY_NAME}}  
+**Website:** {{WEBSITE_URL}}  
+**Email:** {{CONTACT_EMAIL}}

@@ -24,7 +24,7 @@ export function Footer() {
           {siteConfig.siteMeta?.description}
         </p>
       </div>
-      <div className="grid grid-cols-2 items-center justify-between text-center md:text-left">
+      <div className="grid grid-cols-2 items-center justify-between text-center md:text-left h-min">
         {siteConfig.flags?.pricingPage && (
           <PrefetchLink href="/pricing">
             <Button variant="ghost">Pricing</Button>

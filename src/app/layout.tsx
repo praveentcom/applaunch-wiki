@@ -1,6 +1,6 @@
 import "./globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Google_Sans_Code, Google_Sans_Flex } from "next/font/google";
 
 import { ClientLayout } from "@/components/layout/client-layout";
@@ -108,6 +108,11 @@ export const metadata: Metadata = {
     }),
   },
 };
+
+export const viewport: Viewport = {
+  themeColor: "#D77757", // Theme color for the website
+  initialScale: 1,
+}
 
 const fontSans = Google_Sans_Flex({
   subsets: ["latin"],

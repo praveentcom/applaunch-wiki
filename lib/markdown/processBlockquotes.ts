@@ -50,7 +50,7 @@ function processBlockquotes(content: string): string {
               level: quoteLevel,
               content: afterEmptyMatch[2] || "",
             });
-            j++;
+            j += 2;
           } else {
             break;
           }

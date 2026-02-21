@@ -1,7 +1,8 @@
 import "./globals.css";
 
+import { GeistMono } from "geist/font/mono";
+import { GeistSans } from "geist/font/sans";
 import type { Metadata, Viewport } from "next";
-import { Google_Sans_Code, Google_Sans_Flex } from "next/font/google";
 
 import { ClientLayout } from "@/components/layout/client-layout";
 import { Providers } from "@/components/providers";
@@ -114,19 +115,8 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
-const fontSans = Google_Sans_Flex({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap",
-  adjustFontFallback: false,
-});
-
-const fontMono = Google_Sans_Code({
-  subsets: ["latin"],
-  variable: "--font-mono",
-  display: "swap",
-  adjustFontFallback: false,
-});
+const fontSans = GeistSans;
+const fontMono = GeistMono;
 
 /**
  * Root layout component displaying the children components

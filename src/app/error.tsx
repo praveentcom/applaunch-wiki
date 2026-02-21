@@ -3,9 +3,14 @@
 import { Button } from "@workspace/ui/components/button";
 import { Card, CardContent } from "@workspace/ui/components/card";
 import { PrefetchLink } from "@workspace/ui/components/prefetch-link";
-import { Home } from "lucide-react";
+import { Home, RotateCcw } from "lucide-react";
 
-export default function Error() {
+export default function Error({
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
   return (
     <div className="flex items-center justify-center">
       <Card className="w-full">
@@ -18,6 +23,10 @@ export default function Error() {
             </p>
           </div>
           <div className="flex flex-col items-center md:flex-row mx-auto gap-3 justify-center w-full">
+            <Button onClick={reset} variant="secondary">
+              <RotateCcw />
+              Try Again
+            </Button>
             <PrefetchLink href="/">
               <Button>
                 <Home />

@@ -94,7 +94,7 @@ export function extractBlockquotes(content: string): {
               level: quoteLevel,
               content: afterEmptyMatch[2] || "",
             });
-            j++;
+            j += 2;
           } else {
             break;
           }
